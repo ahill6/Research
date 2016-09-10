@@ -13,19 +13,32 @@ Also supports spill trees.
 See: docs for spatialtree.spatialtree
 '''
 
+import sys
 import numpy
 import scipy.stats
 import random
 import heapq
+from math import sqrt
 
 class spatialtree(object):
 
+    def bdom(self, x, y, abouts):
+        "multi objective"
+        x=abouts.objs(x)
+        y=abouts.objs(y)
+        betters = 0
+        for obj in abouts._objs:
+            x1,y1 = x[obj.pos], y[obj.pos]
+            if obj.better(x1,y1) : betters += 1
+            elif x1 != y1: return False # must be worse, go quit
+        return betters > 0
+    
     def __init__(self, data, **kwargs):
         '''
         T = spatialtree(    data, 
                             rule='kd', 
                             spill=0.25, 
-                            height=H, 
+                            height=H, 
                             indices=(index1, index2,...), 
                             min_items=64,
                             steps_2means=1000,
@@ -101,7 +114,12 @@ class spatialtree(object):
         if kwargs['rule'] == 'rp' and 'samples_rp' not in kwargs:
             kwargs['samples_rp']    = 10
             pass
-
+        
+        #if there needs to be any default value for SWAY, put here
+        if kwargs['rule'] == 'sway' and 'samples_sway' not in kwargs:
+            kwargs['swayCull']  = 0.5
+            kwargs['swayStop']  = 2
+            kwargs['swayBigger']= 0.2
 
         # All information is now contained in kwargs, we may proceed
         
@@ -141,6 +159,8 @@ class spatialtree(object):
             splitF  =   self.__2means
         elif kwargs['rule'] == 'rp':
             splitF  =   self.__RP
+        elif kwargs['rule'] == 'sway':
+            splitF  =   self.__sway
         else:
             raise ValueError('Unsupported split rule: %s' % kwargs['rule'])
 
@@ -591,7 +611,110 @@ class spatialtree(object):
             pass
 
         return W[numpy.argmax(max_val - min_val)]
+        
+#    def __sway(self, population, tbl, better= bdom, **kwargs) :
+    def __sway(self, data, **kwargs):       
+        def distance(a, b):
+            """ calculates Euclidean distance between 2 N-dimensional points.Euclidean
+            THIS NEEDS TO BE CHANGED TODO
+            """
+            dist = 0
+            for i in xrange(self.__d):
+                dist += (b[i] - a[i])**2
+            return sqrt(dist)
+            
+        x = random.randint(0,len(data)-1)
+        y = random.randint(0,len(data)-1)
+        west = data[x]
+        east = data[y]
+        
+        max = -1
+        for item in data:
+            c = distance(west, item)
+            if c > max:
+                east = item
+                max = c
+        
+        max = -1
+        for item in data:
+            c = distance(east, item)
+            if c > max:
+                west = item
+                max = c
+                
+        return (west - east) # does it matter which is subtracted?
+        
+"""        swayCull = kwargs['swayCull']
+        swayStop = kwargs['swayStop']
+        swayBigger = kwargs['swayBigger']
+        
+        def cluster(items, out):
+            if len(items) < max(len(population)**swayCull, swayStop):
+                out.append(tbl.clone(items))
+            else:
+                west, east, left, right = split(items, int(len(items)/2)) 
+                if not better(east,west,tbl): cluster( left, out )
+                if not better(west,east,tbl): cluster( right, out )  
+            return out
+            
+        def split(items, mid,west=None, east=None,redo=20):
+            assert redo>0
+            cosine = lambda a,b,c: ( a*a + c*c - b*b )/( 2*c+ 0.0001 )
+            #if west is None: west = any(items) 
+            #if east is None: east = any(items)
+            if west is None: west = tbl.furthest(any(items))
+            #if east is None: east = tbl.furthest(west)
+            if east is None: east = any(items)
+            while east.rid == west.rid:
+                east = any(items)
+            c      = tbl.distance(west, east)
+            xs     = {}
+            for n,item in enumerate(items):
+                a = tbl.distance(item, west)
+                b = tbl.distance(item, east)
+                x = xs[ item.rid ] = cosine(a,b,c) # cosine rule
+                if a > c and abs(a-c)  > swayBigger:
+                    #dot(">%s " % n)
+                    return split(items, mid, west=west, east=item, redo=redo-1)
+                if b > c and abs(b-c) > swayBigger:
+                    #dot("<%s " % n)
+                    return split(items, mid, west=item, east=east, redo=redo-1)   
+                items = sorted(items, key= lambda item: xs[ item.rid ]) # sorted by 'x'
+                return west, east, items[:mid], items[mid:] 
+            # --------
+            return cluster(population, [])
+"""
+"""
 
+@ok
+def _sway(file="data/diabetes.csv"):
+  rseed()
+  tbl0 = csv2table(file)
+  print(0,tbl0.klass[0].my.counts,
+        tbl0.klass[0].my.ent())
+  leafs = sway(tbl0._rows,tbl0,below)
+  n=0
+  for c,tbl in enumerate(leafs):
+    n += len(tbl._rows)
+    print(c,tbl.klass[0].my.counts,
+          tbl.klass[0].my.ent())
+  print(n)
+
+#@ok
+  def worker():
+    rseed()
+    tbl0 = csv2table(file)
+    print(0,tbl0.klass[0].my.counts,
+          tbl0.klass[0].my.ent())
+    leafs = sway(tbl0._rows,tbl0,below)
+    n=0
+    for c,tbl in enumerate(leafs):
+      n += len(tbl._rows)
+      print(c,tbl.klass[0].my.counts,
+            tbl.klass[0].my.ent())
+    print(n)
+  print(timeit(worker))
+  """
 # end spatialtree class
 
 class invertedmap(object):
@@ -603,7 +726,7 @@ class invertedmap(object):
         I   = spatialtree.invertedmap(T)
 
         This provides a more space-efficient data-structure for fast
-        retrieval of a static dataset.
+        retrieval of a static dataset.
         '''
         if not isinstance(T, spatialtree):
             raise TypeError('Argument must be of type: spatialtree')
