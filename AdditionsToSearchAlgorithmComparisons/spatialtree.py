@@ -633,7 +633,7 @@ class spatialtree(object):
         east = furthest(west, data)
         west = furthest(east, data)
                 
-        return (west - east) # does it matter which is subtracted?
+        return (west - east) 
 
 # end spatialtree class
 
