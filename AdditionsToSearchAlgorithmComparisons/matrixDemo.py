@@ -5,7 +5,7 @@ CREATED:2011-11-12 08:23:33 by Brian McFee <bmcfee@cs.ucsd.edu>
 Spatial tree demo for matrix data
 '''
 
-import numpy
+import numpy, fileio, sys
 from spatialtree import spatialtree
 
 
@@ -20,6 +20,13 @@ X = numpy.random.randn(N,D)
 P = numpy.random.randn(D, D)
 
 X = numpy.dot(X, P)
+
+"""
+X = fileio.csv_reader("testdata.csv")
+D = len(X[0])
+N = len(X)
+P = numpy.random.randn(D,D)
+"""
 
 # Construct a tree.  By default, we get a KD-spill-tree with height
 # determined automatically, and spill = 25%
@@ -42,11 +49,11 @@ T_root = spatialtree(X, height=0)
 # Find the 10 approximate nearest neighbors of the 500th data point
 # returned list is row#'s of X closest to the query index, 
 # sorted by increasing distance
-knn_a = T.k_nearest(X, k=10, index=499)
+knn_a = T.k_nearest(X, k=10, index=N-1)
 print 'KNN approx (index) : ', knn_a
 
 # Now, get the true nearest neighbors
-knn_t = T_root.k_nearest(X, k=10, index=499)
+knn_t = T_root.k_nearest(X, k=10, index=N-1)
 print 'KNN true   (index) : ', knn_t
 
 # Recall rate:

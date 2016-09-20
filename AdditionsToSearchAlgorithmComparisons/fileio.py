@@ -12,13 +12,14 @@ def find_median(lst):
         return avg, lst[:mid], lst[mid:] 
 
 def csv_reader(filename):
-    
+    """
     data = numpy.ndfromtxt(
         filename,
         names = True, #  If `names` is True, the field names are read from the first valid line
         comments = '#', # Skip characters after #
         delimiter = ',', # comma separated values
         dtype = None)  # guess the dtype of each column
+    """
     """
     data = []
     f = open(filename, 'r')
@@ -27,10 +28,10 @@ def csv_reader(filename):
         a = line.strip('\n').split(',')
         data.append(a)
     """
-    """
+    
     with open(filename) as temp_file:
         data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
-    """
+
     return data
 
 def summarize(txt):
@@ -87,3 +88,13 @@ def summarize(txt):
         print "Done"
 
 #summarize('.01_5')
+"""
+w = open('data2.csv', 'w')
+with open('data.csv') as temp_file:
+    for line in temp_file:
+        if not line[0]=='$':
+            line = line[:-4]+"\n"
+        else:
+            line = line[:-8]+"\n"
+        w.write(line)
+"""

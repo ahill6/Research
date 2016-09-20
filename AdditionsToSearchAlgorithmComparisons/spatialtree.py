@@ -429,8 +429,8 @@ class spatialtree(object):
         # Now compute distance from query point to the retrieval set
         def dg(S):
             for i in S:
-                #yield (numpy.sum((x-data[i])**2), i)
-                yield (sqrt(numpy.sum((x-data[i])**2)/len(data[i])), i)
+                yield (sqrt(numpy.sum(numpy.subtract(x,data[i])**2)/len(x)),i)
+                #yield (sqrt(numpy.sum((x-data[i])**2)/len(x)), i)
             pass
 
         # Pull out indices in sorted order
@@ -607,70 +607,34 @@ class spatialtree(object):
 
         return W[numpy.argmax(max_val - min_val)]
         
-#    def __sway(self, population, tbl, better= bdom, **kwargs) :
     def __sway(self, data, **kwargs):       
         def distance(a, b):
-            """ calculates Euclidean distance between 2 N-dimensional points.
+            """ calculates normalized Euclidean distance between two N-dimensional points.
             """
             dist = 0
             for i in xrange(self.__d):
                 dist += (b[i] - a[i])**2
-            return sqrt(dist/data.shape[1])
+            return sqrt(dist/len(data[0]))
+        
+        def furthest(point, datapoints):
+            max = -1
+            farthest = []
+            for item in datapoints:
+                c = distance(point, item)
+                if c > max:
+                    farthest = item
+                    max = c
+            return farthest
+
             
         x = random.randint(0,len(data)-1)
-        y = random.randint(0,len(data)-1)
         west = data[x]
-        east = data[y]
         
-        max = -1
-        for item in data:
-            c = distance(west, item)
-            if c > max:
-                east = item
-                max = c
-        
-        max = -1
-        for item in data:
-            c = distance(east, item)
-            if c > max:
-                west = item
-                max = c
+        east = furthest(west, data)
+        west = furthest(east, data)
                 
         return (west - east) # does it matter which is subtracted?
 
-
-#    def __sway(self, population, tbl, better= bdom, **kwargs) :
-    def __sway2(self, data, **kwargs):       
-        def distance(a, b):
-            """ calculates Euclidean distance between 2 N-dimensional points.
-            """
-            dist = 0
-            for i in xrange(self.__d):
-                dist += (b[i] - a[i])**2
-            return sqrt(dist/data.shape[1])
-        cosine = lambda a,b,c: ( a*a + c*c - b*b )/( 2*c+ 0.0001 )
-        
-        x = random.randint(0,len(data)-1)
-        y = random.randint(0,len(data)-1)
-        west = data[x]
-        east = data[y]
-        d = distance(west, east)
-        max = -1
-        for item in data:
-            c = distance(west, item)
-            if c > max:
-                east = item
-                max = c
-        
-        max = -1
-        for item in data:
-            c = distance(east, item)
-            if c > max:
-                west = item
-                max = c
-                
-        return (east - west) # does it matter which is subtracted?
-                
 # end spatialtree class
 
 class invertedmap(object):
@@ -799,7 +763,7 @@ class invertedmap(object):
         # Now compute distance from query point to the retrieval set
         def dg(S):
             for i in S:
-                yield (numpy.sum((x-data[i])**2), i)
+                yield (sqrt(numpy.sum((x-data[i])**2)/len(x)), i)
             pass
 
         # Pull out indices in sorted order
