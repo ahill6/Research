@@ -25,7 +25,7 @@ X = numpy.dot(X, P)
 # determined automatically, and spill = 25%
 
 print 'Building tree...'
-T = spatialtree(X)
+T = spatialtree(X, spill=.01, rule='2-means')
 print 'done.'
 
 # Show some useful information about the tree

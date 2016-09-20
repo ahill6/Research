@@ -18,20 +18,10 @@ import numpy
 import scipy.stats
 import random
 import heapq
+import copy
 from math import sqrt
 
 class spatialtree(object):
-
-    def bdom(self, x, y, abouts):
-        "multi objective"
-        x=abouts.objs(x)
-        y=abouts.objs(y)
-        betters = 0
-        for obj in abouts._objs:
-            x1,y1 = x[obj.pos], y[obj.pos]
-            if obj.better(x1,y1) : betters += 1
-            elif x1 != y1: return False # must be worse, go quit
-        return betters > 0
     
     def __init__(self, data, **kwargs):
         '''
@@ -115,8 +105,9 @@ class spatialtree(object):
             kwargs['samples_rp']    = 10
             pass
         
-        #if there needs to be any default value for SWAY, put here
-        if kwargs['rule'] == 'sway' and 'samples_sway' not in kwargs:
+        #if there needs to be any default value for WHERE, put here
+        # TODO - add a way to input your preferred values for these
+        if kwargs['rule'] == 'sway':
             kwargs['swayCull']  = 0.5
             kwargs['swayStop']  = 2
             kwargs['swayBigger']= 0.2
@@ -161,6 +152,10 @@ class spatialtree(object):
             splitF  =   self.__RP
         elif kwargs['rule'] == 'sway':
             splitF  =   self.__sway
+        elif kwargs['rule'] == 'spectral':
+            print("under construction")
+            sys.exit(0)
+            #splitF  =   self.__spectral
         else:
             raise ValueError('Unsupported split rule: %s' % kwargs['rule'])
 
@@ -416,7 +411,6 @@ class spatialtree(object):
         A sorted list of the indices of k-nearest (approximate) neighbors of the query
         '''
 
-
         if 'k' not in kwargs:
             raise Exception('k_nearest called with no value of k')
 
@@ -435,7 +429,8 @@ class spatialtree(object):
         # Now compute distance from query point to the retrieval set
         def dg(S):
             for i in S:
-                yield (numpy.sum((x-data[i])**2), i)
+                #yield (numpy.sum((x-data[i])**2), i)
+                yield (sqrt(numpy.sum((x-data[i])**2)/len(data[i])), i)
             pass
 
         # Pull out indices in sorted order
@@ -517,7 +512,7 @@ class spatialtree(object):
         '''
         moment_1 = numpy.zeros(self.__d)
         moment_2 = numpy.zeros(self.__d)
-
+        
         for i in self.__indices:
             moment_1 += data[i]
             moment_2 += data[i] ** 2
@@ -615,13 +610,12 @@ class spatialtree(object):
 #    def __sway(self, population, tbl, better= bdom, **kwargs) :
     def __sway(self, data, **kwargs):       
         def distance(a, b):
-            """ calculates Euclidean distance between 2 N-dimensional points.Euclidean
-            THIS NEEDS TO BE CHANGED TODO
+            """ calculates Euclidean distance between 2 N-dimensional points.
             """
             dist = 0
             for i in xrange(self.__d):
                 dist += (b[i] - a[i])**2
-            return sqrt(dist)
+            return sqrt(dist/data.shape[1])
             
         x = random.randint(0,len(data)-1)
         y = random.randint(0,len(data)-1)
@@ -643,78 +637,40 @@ class spatialtree(object):
                 max = c
                 
         return (west - east) # does it matter which is subtracted?
-        
-"""        swayCull = kwargs['swayCull']
-        swayStop = kwargs['swayStop']
-        swayBigger = kwargs['swayBigger']
-        
-        def cluster(items, out):
-            if len(items) < max(len(population)**swayCull, swayStop):
-                out.append(tbl.clone(items))
-            else:
-                west, east, left, right = split(items, int(len(items)/2)) 
-                if not better(east,west,tbl): cluster( left, out )
-                if not better(west,east,tbl): cluster( right, out )  
-            return out
-            
-        def split(items, mid,west=None, east=None,redo=20):
-            assert redo>0
-            cosine = lambda a,b,c: ( a*a + c*c - b*b )/( 2*c+ 0.0001 )
-            #if west is None: west = any(items) 
-            #if east is None: east = any(items)
-            if west is None: west = tbl.furthest(any(items))
-            #if east is None: east = tbl.furthest(west)
-            if east is None: east = any(items)
-            while east.rid == west.rid:
-                east = any(items)
-            c      = tbl.distance(west, east)
-            xs     = {}
-            for n,item in enumerate(items):
-                a = tbl.distance(item, west)
-                b = tbl.distance(item, east)
-                x = xs[ item.rid ] = cosine(a,b,c) # cosine rule
-                if a > c and abs(a-c)  > swayBigger:
-                    #dot(">%s " % n)
-                    return split(items, mid, west=west, east=item, redo=redo-1)
-                if b > c and abs(b-c) > swayBigger:
-                    #dot("<%s " % n)
-                    return split(items, mid, west=item, east=east, redo=redo-1)   
-                items = sorted(items, key= lambda item: xs[ item.rid ]) # sorted by 'x'
-                return west, east, items[:mid], items[mid:] 
-            # --------
-            return cluster(population, [])
-"""
-"""
 
-@ok
-def _sway(file="data/diabetes.csv"):
-  rseed()
-  tbl0 = csv2table(file)
-  print(0,tbl0.klass[0].my.counts,
-        tbl0.klass[0].my.ent())
-  leafs = sway(tbl0._rows,tbl0,below)
-  n=0
-  for c,tbl in enumerate(leafs):
-    n += len(tbl._rows)
-    print(c,tbl.klass[0].my.counts,
-          tbl.klass[0].my.ent())
-  print(n)
 
-#@ok
-  def worker():
-    rseed()
-    tbl0 = csv2table(file)
-    print(0,tbl0.klass[0].my.counts,
-          tbl0.klass[0].my.ent())
-    leafs = sway(tbl0._rows,tbl0,below)
-    n=0
-    for c,tbl in enumerate(leafs):
-      n += len(tbl._rows)
-      print(c,tbl.klass[0].my.counts,
-            tbl.klass[0].my.ent())
-    print(n)
-  print(timeit(worker))
-  """
+#    def __sway(self, population, tbl, better= bdom, **kwargs) :
+    def __sway2(self, data, **kwargs):       
+        def distance(a, b):
+            """ calculates Euclidean distance between 2 N-dimensional points.
+            """
+            dist = 0
+            for i in xrange(self.__d):
+                dist += (b[i] - a[i])**2
+            return sqrt(dist/data.shape[1])
+        cosine = lambda a,b,c: ( a*a + c*c - b*b )/( 2*c+ 0.0001 )
+        
+        x = random.randint(0,len(data)-1)
+        y = random.randint(0,len(data)-1)
+        west = data[x]
+        east = data[y]
+        d = distance(west, east)
+        max = -1
+        for item in data:
+            c = distance(west, item)
+            if c > max:
+                east = item
+                max = c
+        
+        max = -1
+        for item in data:
+            c = distance(east, item)
+            if c > max:
+                west = item
+                max = c
+                
+        return (east - west) # does it matter which is subtracted?
+                
 # end spatialtree class
 
 class invertedmap(object):

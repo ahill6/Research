@@ -16,7 +16,7 @@ def matrixDemoTestWorker(size=None, dimensions=None, tree_type=None, spill_rate=
     tree= tree_type or 'kd'
     spill = spill_rate or .25
     #samples = samp or 100
-    samples = 5
+    samples = 100
     X = numpy.random.randn(N,D)
     
     #Random projection to liven up the data
@@ -67,8 +67,9 @@ def matrixTestMaster(samples, trials):
     results = dict()
     #trees = ['kd', 'pca', '2-means', 'rp', 'sway']
     #spill_rates = [0.00, 0.01, 0.05, 0.10, 0.15, 0.2, 0.25]
-    trees = ['sway']
-    spill_rates = [0.01]
+    #trees = ['kd', 'pca', '2-means', 'rp', 'sway', 'sway2']
+    trees = ['sway', 'sway2']
+    spill_rates = [0.01, 0.05, 0.10]
     
     for x in trees:
         for y in spill_rates:
@@ -87,7 +88,7 @@ def matrixTestMaster(samples, trials):
     
 def pretty_print(d):
     
-    for k in d:
+    for k in sorted(d.keys()):
         print k,"\t\t : ", d[k]
 
 data = matrixTestMaster(0, 1)

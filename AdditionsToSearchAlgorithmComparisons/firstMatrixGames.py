@@ -12,14 +12,21 @@ from spatialtree import spatialtree
 # First, create a random data matrix
 N = 5000
 D = 20
+k = 5
+max_value = 100
 
-X = numpy.random.randn(N,D)
+X = numpy.random.randn(N, k)
+for i in xrange(k):
+    X[:][i] *= random.random()*max_value
+    X[:][i] += random.random()*max_value
 
 
-# Apply a random projection so the data's not totally boring
-P = numpy.random.randn(D, D)
+P = numpy.random.randn(k, D)
 
-X = numpy.dot(X, P)
+# Apply a few random projections so the data's not totally boring
+for i in xrange(k):
+    P = numpy.random.randn(D, D)
+    X = numpy.dot(X, P)
 
 # Construct a tree.  By default, we get a KD-spill-tree with height
 # determined automatically, and spill = 25%
