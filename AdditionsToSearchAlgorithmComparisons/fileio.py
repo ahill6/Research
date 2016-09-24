@@ -1,5 +1,5 @@
 from math import floor
-import sys, os, numpy
+import sys, os, numpy, csv
 
 # Helper methods
 def find_median(lst):
@@ -33,10 +33,15 @@ def csv_reader(filename):
         data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
 
     return data
-
+    
+def pretty_print(f, d):
+    for k in sorted(d.keys()):
+        f.write(k,"\t\t : ", d[k])
+        
 def summarize(txt):
     path = '.'        
-    files = [f for f in os.listdir(path) if f.endswith('.txt') & (txt in f) & ('summary' not in f)]
+    #files = [f for f in os.listdir(path) if f.endswith('.txt') & (txt in f) & ('summary' not in f)]
+    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('summary' not in f)]
     
     """for f in files:
         print f
@@ -53,48 +58,163 @@ def summarize(txt):
             
             # read in something
             cin = f.readline()
-            in_tree = cin.split(', ')
-            
-            cin = f.readline()
-            out_of_tree = cin.split(', ')
-            
+            cin = cin[:-2]
+            results = cin.strip("\n").split(',')
+
             # order that, find percentiles (min, 25%, median, 75%, max)
-            in_tree = sorted(in_tree)
-            out_of_tree = sorted(out_of_tree)
-            
-            in_min = in_tree[0]
-            in_25 = find_median(find_median(in_tree)[1])[0]
-            in_median = find_median(in_tree)[0]
-            in_75 = find_median(find_median(in_tree)[2])[0]
-            in_max = in_tree[-1]
-            
-            out_min = out_of_tree[0]
-            out_25 = find_median(find_median(out_of_tree)[1])[0]
-            out_median = find_median(out_of_tree)[0]
-            out_75 = find_median(find_median(out_of_tree)[2])[0]
-            out_max = out_of_tree[-1]
+            results = sorted(results)
+            min = results[0]
+            _25 = find_median(find_median(results)[1])[0]
+            median = find_median(results)[0]
+            _75 = find_median(find_median(results)[2])[0]
+            max = results[-1]
             
             # print that data to a summary file
-            in_tree_output = "" + str(in_min) + "," + str(in_25) + "," + str(in_median) + "," + str(in_75) + "," + str(in_max)
-            out_of_tree_output = "" + str(out_min) + "," + str(out_25) + "," + str(out_median) + "," + str(out_75) + "," + str(out_max)
+            output = "" + str(min) + "," + str(_25) + "," + str(median) + "," + str(_75) + "," + str(max)
             
-            summary.write(in_tree_output +"\n")
-            summary.write(out_of_tree_output +"\n")
+            summary.write(f.name+"\n"+output +"\n")
             
             # close data file and repeat
             f.close()
-            
+        pretty_print(summary, txt)    
         summary.close()
         print "Done"
+        
+def make_stats():
+    path = '.'        
+    #files = [f for f in os.listdir(path) if f.endswith('.txt') & (txt in f) & ('summary' not in f)]
+    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('summary' not in f)]
+    
+    if len(files) > 0:
+        summary = open('summary.txt', 'w')
+        print "Making Stats..."
+        
+        for f in sorted(files):
+            # open file
+            f = open(f, 'r')
+            print f.name
+            
+            true_pos = []
+            false_pos = []
+            false_neg = []
+            true_neg = []
+            recall = []
+            pf = []
+            prec = []
+            acc = []
+            select = []
+            neg_pos = []
+            
+            # read in something
+            cin = f.readline()
+            cin = cin[:-2]
+            results = cin.strip("\n").split(',')
+            mean_recall = 0
+            mean_pf = 0
+            mean_prec = 0
+            mean_acc = 0
+            mean_select = 0
+            mean_neg_pos = 0
 
-#summarize('.01_5')
-"""
-w = open('data2.csv', 'w')
-with open('data.csv') as temp_file:
-    for line in temp_file:
-        if not line[0]=='$':
-            line = line[:-4]+"\n"
-        else:
-            line = line[:-8]+"\n"
-        w.write(line)
-"""
+            # calculate stats (quartiles, all others)
+            for item in results:
+                tp,fp,tn = item.split('-')
+                tp = float(tp)
+                fp = float(fp)
+                tn = float(tn)
+                fn = fp
+
+                true_pos.append(tp)
+                false_pos.append(fp)
+                false_neg.append(fp)    #this would normally be otherwise
+                true_neg.append(tn)
+                
+                recall.append((tp+0.0)/(fn + tp))
+                pf.append((fp+0.0)/(tn+fp))
+                prec.append((tp+0.0)/(tp+fp))
+                acc.append((tn+tp+0.0)/(tn+fn+fp+tp))
+                select.append((fp+tp+0.0)/(tn+fn+fp+tp))
+                neg_pos.append((tn+fp+0.0)/(fn+tp))
+                
+                mean_recall += (tp+0.0)/(fn + tp)
+                mean_pf += (fp+0.0)/(tn+fp)
+                mean_prec += (tp+0.0)/(tp+fp)
+                mean_acc += (tn+tp+0.0)/(tn+fn+fp+tp)
+                mean_select += (fp+tp+0.0)/(tn+fn+fp+tp)
+                mean_neg_pos += (tn+fp+0.0)/(fn+tp)
+            
+            # find iqr
+            recall = sorted(recall)
+            _25 = find_median(find_median(recall)[1])[0]
+            median = find_median(recall)[0]
+            _75 = find_median(find_median(recall)[2])[0]
+            
+            # print that data to a summary file   
+            total = len(recall)
+            summary.write(f.name+"\n")
+            summary.write(str(_25) + "\t" + str(median) + "\t" + str(_75) + "\n")
+            #summary.write("\t".join(str(_25),str(median),str(_75)) + "\n")
+            summary.write("rec:\t " + str(mean_recall/total) + "\n")
+            summary.write("pf:\t " + str(mean_pf/total) + "\n")
+            summary.write("prec:\t " + str(mean_prec/total) + "\n")
+            summary.write("acc:\t " + str(mean_acc/total) + "\n")
+            summary.write("select:\t " + str(mean_select/total) + "\n")
+            summary.write("neg/pos:\t " + str(mean_neg_pos/total) + "\n")
+            
+            # close data file and repeat
+            f.close()
+        #pretty_print(summary, txt)    
+        summary.close()
+        print "Done"   
+
+def strip_csv(file, col):
+    cout = open('tmp.csv', 'w')
+    with open(file, 'r') as f:
+        for line in f:
+            results = line.strip("\n").split(',')
+            del results[col]
+            cout.write(','.join([r for r in results])+"\n")
+    cout.close()
+
+
+def make_table(methods, spills, tree_depths, num_entries, num_decisions, summary data):
+    for x in xrange(2*len(methods)+1):
+        out.write(',')
+    cout = "\n,data = " + str(num_entries) + ', ' + str(num_decisions) + "decisions"
+    for x in xrange(2*len(methods)):
+        cout += ','
+    out.write(cout+"\n,,")
+    for x in methods:
+        out.write(x+',,')
+    out.write(',,\n,Spill-depth,')
+    cout = 'median,iqr,'*len(methods)
+    out.write(cout+',\n')
+    for a in spill:
+        for b in tree_depth:
+            out.write(',' + str(b) + ' ' + str(a) + ',')
+            for t in trees: # need to guarantee these go in order
+                out.write(median[t] + ',' + iqr[t] + ',')
+            out.write(',\n')
+    cout = [',' for i in 2*len(methods) + 1].tostring
+    out.write(cout)
+    out.write(cout)
+    out.write(cout)
+    """
+    for a in spill:
+        for b in tree_depth: # write this to do all or just 5, 13?
+            out.write(',' + str(b) + ' ' + str(a) + ',')
+            for m in methods:
+                out.write(m + ',')
+            out.write(',,\n,')
+            outpf = [i for i in pf if a==a if b==b]tostring #?? 
+            for m in methods:
+                # how to put the label at the beginning of the line, then loop through the method values?
+                out.write('pf:,' + pf[a][b][m] + ',') # how to reference?
+                out.write(pf[a][b][m] + ',') # how to reference?
+                out.write(pf[a][b][m] + ',') # how to reference?
+                out.write(pf[a][b][m] + ',') # how to reference?
+    """    
+            
+#strip_csv('mccabes_mc12.csv',0)            
+make_stats()
+#need to cut the first element off of mccabes_mc12 before using

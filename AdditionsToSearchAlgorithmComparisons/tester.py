@@ -23,10 +23,12 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
     k_near = k_neighbors or 10
     k = 5
     max_value = 100
+    filename = "testdata.csv"
     
     # Python interprets spill_layer = 0 as False, and so sets spill to .25
     if spill_rate == 0:
         spill = 0
+    
     
     """
     X = numpy.random.randn(N, D)
@@ -112,8 +114,8 @@ def matrixTestMaster(samples, trials, size = None, dimensions = None, tree_type 
     #trees = ['kd', 'pca', '2-means', 'rp', 'sway']
     #spill_rates = [0, 0.01, 0.05, 0.10, 0.15, 0.2, 0.25]
     #tree_depth = [5, 6, 7, 8, 9, 10, 11, 12, 13]
-    tree_depths = [5]
-    trees = ['rp', 'sway']
+    tree_depths = [5,13]
+    trees = ['pca','rp', 'sway']
     spill_rates = [0.05]
     myArray=[[[[0 for a in range(2)] for k in range(len(tree_depths))] for j in range(len(spill_rates))] for i in range(len(trees))]
     
@@ -132,6 +134,17 @@ def pretty_print(d):
     for k in sorted(d.keys()):
         print k,"\t\t : ", d[k]
 
+
+def testMaster():
+    # read in the data
+    data  = 1
+    # divide the data into 5 groups for cross validation
     
-matrixTestMaster(0, 1)
+    # for each, use the other 4 groups for training, test on the remaining group
+    
+    # collate and analyze results
+    
+    
+#matrixTestMaster(0, 1)
+matrixDemoTestWorker()
 #summarize(".01_5")

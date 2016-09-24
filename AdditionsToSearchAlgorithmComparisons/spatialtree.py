@@ -19,6 +19,7 @@ import scipy.stats
 import random
 import heapq
 import copy
+import timeit
 from math import sqrt
 
 class spatialtree(object):
@@ -107,10 +108,10 @@ class spatialtree(object):
         
         #if there needs to be any default value for WHERE, put here
         # TODO - add a way to input your preferred values for these
-        if kwargs['rule'] == 'sway':
-            kwargs['swayCull']  = 0.5
-            kwargs['swayStop']  = 2
-            kwargs['swayBigger']= 0.2
+        if kwargs['rule'] == 'where':
+            kwargs['whereCull']  = 0.5
+            kwargs['whereStop']  = 2
+            kwargs['whereBigger']= 0.2
 
         # All information is now contained in kwargs, we may proceed
         
@@ -122,7 +123,7 @@ class spatialtree(object):
         self.__w            = None
         self.__thresholds   = None
         self.__keyvalue     = isinstance(data, dict)
-
+        
         # Compute the dimensionality of the data
         # This way supports opaque key-value stores as well as numpy arrays
         for x in self.__indices:
@@ -131,8 +132,8 @@ class spatialtree(object):
 
         # Split the new node
         self.__height       = self.__split(data, **kwargs)
-
         pass
+    
 
     def __split(self, data, **kwargs):
         '''
@@ -140,7 +141,7 @@ class spatialtree(object):
 
         Not to be called externally.
         '''
-
+        
         # First, find the split rule
         if kwargs['rule'] == 'pca':
             splitF  =   self.__PCA
@@ -150,24 +151,27 @@ class spatialtree(object):
             splitF  =   self.__2means
         elif kwargs['rule'] == 'rp':
             splitF  =   self.__RP
-        elif kwargs['rule'] == 'sway':
-            splitF  =   self.__sway
+        elif kwargs['rule'] == 'where':
+            splitF  =   self.__where
+        elif kwargs['rule'] == 'random':
+            splitF  =   self.__random
         elif kwargs['rule'] == 'spectral':
             print("under construction")
             sys.exit(0)
             #splitF  =   self.__spectral
         else:
             raise ValueError('Unsupported split rule: %s' % kwargs['rule'])
-
+        
         if kwargs['height'] < 0:
             raise ValueError('spatialtree.split() called with height<0')
-
+        
         # If the height is 0, or the set is too small, then we don't need to split
         if kwargs['height'] == 0 or len(kwargs['indices']) < kwargs['min_items']:
             return  0
-
+        
         # Compute the split direction 
         self.__w = splitF(data, **kwargs)
+
 
         # Project onto split direction
         wx = {}
@@ -395,8 +399,6 @@ class spatialtree(object):
         raise Exception('spatialtree.retrievalSet must be supplied with either an index or a data vector')
         pass
 
-
-
     def k_nearest(self, data, **kwargs):
         '''
         neighbors = T.k_nearest(data, k=10, index=X, vector=X)
@@ -478,6 +480,8 @@ class spatialtree(object):
         (leading eigenvector of the covariance matrix) of data in 
         the current node.
         '''
+        start_time = timeit.default_timer()
+        
         # first moment
         moment_1 = numpy.zeros(self.__d)
 
@@ -501,6 +505,8 @@ class spatialtree(object):
         
         # top eigenvector
         w           = v[:,numpy.argmax(l)]
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')
         return w
 
     def __KD(self, data, **kwargs):
@@ -510,6 +516,7 @@ class spatialtree(object):
         Finds the coordinate axis with highest variance of data
         in the current node
         '''
+        start_time = timeit.default_timer()
         moment_1 = numpy.zeros(self.__d)
         moment_2 = numpy.zeros(self.__d)
         
@@ -527,6 +534,8 @@ class spatialtree(object):
         # the coordinate of maximum variance
         w           = numpy.zeros(self.__d)
         w[numpy.argmax(sigma)] = 1
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')
         return w
 
     def __2means(self, data, **kwargs):
@@ -541,6 +550,7 @@ class spatialtree(object):
         update.  The algorithm runs through the data in random order until
         a specified minimum number of updates have occurred (default: 1000).
         '''
+        start_time = timeit.default_timer()
         def D(u,v):
             return numpy.sum( (u-v)**2 )
 
@@ -572,6 +582,8 @@ class spatialtree(object):
         w = centers[0] - centers[1]
 
         w /= numpy.sqrt(numpy.sum(w**2))
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')
         return w
 
 
@@ -584,6 +596,7 @@ class spatialtree(object):
         maximizes the diameter of projected data from the current node:
         w <- argmax_(w_1, w_2, ..., w_m) max_(x1, x2 in node) |w' (x1 - x2)|
         '''
+        start_time = timeit.default_timer()
         k   = kwargs['samples_rp']
 
         # sample directions from d-dimensional normal
@@ -604,10 +617,13 @@ class spatialtree(object):
             min_val = numpy.minimum(min_val, Wx)
             max_val = numpy.maximum(max_val, Wx)
             pass
-
+        
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')
         return W[numpy.argmax(max_val - min_val)]
         
-    def __sway(self, data, **kwargs):       
+    def __where(self, data, **kwargs):
+        start_time = timeit.default_timer()
         def distance(a, b):
             """ calculates normalized Euclidean distance between two N-dimensional points.
             """
@@ -632,8 +648,54 @@ class spatialtree(object):
         
         east = furthest(west, data)
         west = furthest(east, data)
-                
-        return (west - east) 
+
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')                
+        return (west - east)  
+        
+    def __random(self, data, **kwargs):
+        start_time = timeit.default_timer()
+        x = random.randint(0,len(data)-1)
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')  
+        return data[x]          
+
+    def __spectral(self, data, **kwargs):
+        '''
+        spectral split:
+
+        Computes a split direction by the top principal component
+        (leading eigenvector of the covariance matrix) of data in 
+        the current node.
+        '''
+        start_time = timeit.default_timer()
+        # first moment
+        moment_1 = numpy.zeros(self.__d)
+
+        # second moment
+        moment_2 = numpy.zeros((self.__d, self.__d))
+
+        # Compute covariance matrix
+        for i in self.__indices:
+            moment_1 += data[i]
+            moment_2 += numpy.outer(data[i], data[i])
+            pass
+
+        # the mean
+        moment_1    /= len(self)
+
+        # the covariance
+        sigma       = (moment_2 - (len(self) * numpy.outer(moment_1, moment_1))) / (len(self)- 1.0)
+
+        # eigendecomposition
+        (l, v)      = numpy.linalg.eigh(sigma)
+        
+        # top eigenvector
+        w           = v[:,numpy.argmax(l)]
+        
+        elapsed = timeit.default_timer() - start_time
+        #print(str(elapsed)+',')
+        return w
 
 # end spatialtree class
 
