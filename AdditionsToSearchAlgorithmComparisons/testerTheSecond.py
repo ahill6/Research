@@ -10,7 +10,7 @@ from fileio import summarize, csv_reader, make_stats
 
 
 results_memo = {}
-def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill_rate = None, samp = None, k_neighbors = None, tree_depth=None):
+def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill_rate = None, samp = None, k_neighbors = None, tree_depth=None, files=None):
     #this_run = dict()
     this_run = [0 for i in xrange(2)]
     
@@ -25,7 +25,7 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
     k_near = k_neighbors or 10
     k = 5
     max_value = 100
-    filename = "mccabes_mc12.csv"
+    filename = files
     
     # Python interprets spill_layer = 0 as False, and so sets spill to .25
     if spill_rate == 0:
@@ -34,7 +34,8 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
         
     # read in the data
     X = csv_reader(filename)
-
+    N = len(X)
+    D = len(X[0])
     # divide the data into 5 groups for cross validation
     i = 0
     random.shuffle(X)
@@ -84,34 +85,36 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
     f.write("\n")
     f.close()
     timer.close()
-    # collate and analyze results
-    
+    return N,D # return the number of entries and decisions so they can be passed to data postprocessing
 
 def matrixTestMaster(samples, trials, size = None, dimensions = None, tree_type = None, spill_rate = None, samp = None, k_neighbors = None):
     #call the method with different tree types, spill levels, et al  many times and average/collate the data 
     #All cases listed first for ease of reference
     #results = dict()
-    #trees = ['kd', 'pca', '2-means', 'rp', 'where', 'random']
+    #trees = ['kd', 'pca', '2-means', 'rp', 'where', 'random', 'spectral']
     #spill_rates = [0, 0.01, 0.05, 0.10, 0.15, 0.2, 0.25]
     #tree_depth = [5, 6, 7, 8, 9, 10, 11, 12, 13]
-    tree_depths = [5, 9, 13]
-    trees = ['pca', 'where', 'random']
-    spill_rates = [0, 0.01, 0.25]
-    myArray=[[[[0 for a in range(2)] for k in range(len(tree_depths))] for j in range(len(spill_rates))] for i in range(len(trees))]
+    #files = ['cassandra.csv', 'diabetes.csv', 'mccabes_mc12.csv', 'testdata.csv']
+    tree_depths = [5, 7, 9, 11, 13]
+    trees = ['kd', 'pca', '2-means', 'rp', 'where', 'random', 'spectral']
+    spill_rates = [0, 0.01, 0.05, 0.1]
+    files = ['diabetes.csv']
+    #myArray=[[[[0 for a in range(2)] for k in range(len(tree_depths))] for j in range(len(spill_rates))] for i in range(len(trees))]
     
     
-    for x in xrange(len(trees)):
-        for y in xrange(len(spill_rates)):
-            for z in xrange(len(tree_depths)):
-                for a in xrange(trials):
-                    matrixDemoTestWorker(tree_type = trees[x], spill_rate = spill_rates[y], tree_depth = tree_depths[z])
+    for b in files:
+        for x in xrange(len(trees)):
+            for y in xrange(len(spill_rates)):
+                for z in xrange(len(tree_depths)):
+                    for a in xrange(trials):
+                        n, d = matrixDemoTestWorker(tree_type = trees[x], spill_rate = spill_rates[y], tree_depth = tree_depths[z], files=b)
 
     # call the fileio summarize method to give quartiles of data collected
     #for t in trees:
         #summarize(str(t))
         #summarize(t+"_0.05_5")
     #pretty_print(results_memo)
-    make_stats()
+    make_stats(num_entries = n, num_decisions=d)
 
 def pretty_print(d):
     for k in sorted(d.keys()):

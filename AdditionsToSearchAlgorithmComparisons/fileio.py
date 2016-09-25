@@ -1,5 +1,7 @@
 from math import floor
-import sys, os, numpy, csv
+from collections import defaultdict
+from tools import items
+import sys, os, numpy, csv, classes
 
 # Helper methods
 def find_median(lst):
@@ -11,6 +13,12 @@ def find_median(lst):
         avg = (float(lst[mid-1]) + float(lst[mid]))/2.0
         return avg, lst[:mid], lst[mid:] 
 
+def del_txt():
+    path = '.'
+    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('summary' not in f)]
+    for f in files:
+        os.remove(f)
+        
 def csv_reader(filename):
     """
     data = numpy.ndfromtxt(
@@ -28,9 +36,16 @@ def csv_reader(filename):
         a = line.strip('\n').split(',')
         data.append(a)
     """
-    
     with open(filename) as temp_file:
         data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
+        
+    # record information about this particular dataset    
+    f = open(filename.split(".")[0]+"_stats.txt", 'w')
+    f.write("medians\n"+str(numpy.median(data, axis=0))+"\n")
+    f.write("variable minima\n"+str(numpy.amin(data, axis=0))+"\n")
+    f.write("variable maxima\n"+str(numpy.amax(data, axis=0))+"\n")
+    f.write("standard deviations\n"+str(numpy.std(data, axis=0))+"\n")
+    #numpy.corrcoef(a, rowvar=0) # save this for if needed
 
     return data
     
@@ -80,19 +95,28 @@ def summarize(txt):
         summary.close()
         print "Done"
         
-def make_stats():
+def make_stats(num_entries=None, num_decisions=None):
     path = '.'        
     #files = [f for f in os.listdir(path) if f.endswith('.txt') & (txt in f) & ('summary' not in f)]
-    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('summary' not in f)]
+    files = [f for f in os.listdir(path) if f.endswith('.txt') if ("_" in f) if ('summary' not in f) if  ("stat" not in f)]
+    timers = [f for f in os.listdir(path) if "." not in f]
     
     if len(files) > 0:
-        summary = open('summary.txt', 'w')
+        stats = open('stats.txt', 'w')
+        medians = open("medians.txt",'w')
+        times = open('times.txt','w')
         print "Making Stats..."
+        
+        for g in timers:
+            h = open(g, 'r')
+            times.write(g + "\n" + h.readline()+"\n")
+            h.close()
+        times.close()
         
         for f in sorted(files):
             # open file
             f = open(f, 'r')
-            print f.name
+            #print f.name
             
             true_pos = []
             false_pos = []
@@ -151,21 +175,26 @@ def make_stats():
             
             # print that data to a summary file   
             total = len(recall)
-            summary.write(f.name+"\n")
-            summary.write(str(_25) + "\t" + str(median) + "\t" + str(_75) + "\n")
-            #summary.write("\t".join(str(_25),str(median),str(_75)) + "\n")
-            summary.write("rec:\t " + str(mean_recall/total) + "\n")
-            summary.write("pf:\t " + str(mean_pf/total) + "\n")
-            summary.write("prec:\t " + str(mean_prec/total) + "\n")
-            summary.write("acc:\t " + str(mean_acc/total) + "\n")
-            summary.write("select:\t " + str(mean_select/total) + "\n")
-            summary.write("neg/pos:\t " + str(mean_neg_pos/total) + "\n")
+            stats.write(f.name+"\n")
+            medians.write(f.name+"\n")
+            medians.write(str(_25) + "\t" + str(median) + "\t" + str(_75) + "\n")
+            #summary.write(" ".join(str(_25),str(median),str(_75)) + "\n")
+            stats.write("rec " + str(mean_recall/total) + "\n")
+            stats.write("pf " + str(mean_pf/total) + "\n")
+            stats.write("prec " + str(mean_prec/total) + "\n")
+            stats.write("acc " + str(mean_acc/total) + "\n")
+            stats.write("select " + str(mean_select/total) + "\n")
+            stats.write("neg/pos " + str(mean_neg_pos/total) + "\n")
             
             # close data file and repeat
             f.close()
         #pretty_print(summary, txt)    
-        summary.close()
-        print "Done"   
+        stats.close()
+        medians.close()
+        print "Done"
+        
+        table_please(infile = stats.name, num_decisions=num_decisions, num_entries=num_entries) # need some way to pass num_entries and num_decisions to table_please
+        table_please(infile = medians.name, num_decisions=num_decisions, num_entries=num_entries) # need some way to pass num_entries and num_decisions to table_please
 
 def strip_csv(file, col):
     cout = open('tmp.csv', 'w')
@@ -176,8 +205,117 @@ def strip_csv(file, col):
             cout.write(','.join([r for r in results])+"\n")
     cout.close()
 
+def table_please(num_entries=None, num_decisions=None, infile=None):
+    results = dict()
+    #print(infile)
 
-def make_table(methods, spills, tree_depths, num_entries, num_decisions, summary data):
+    def nested_set(dic, keys, value):
+        for key in keys[:-1]:
+            dic = dic.setdefault(key, {})
+        dic[keys[-1]] = value
+        """
+        if not isinstance(value, (list, tuple)):
+            dic[keys[-1]] = value
+        else:
+            dic[keys[-1]].append(value)
+        """
+    def medians(cin):
+        x,y,z = cin.split()
+        e = [y, eval(z) - eval(x)]
+        nested_set(results,[s,d,m], e)
+    def stats(cin):
+        x,y = cin.split()
+        nested_set(results,[s,d,x,m], y)
+    
+    file = infile or 'summary.txt'
+    if 'median' in infile:
+        process = medians
+        out = 'medians.ods'
+    elif 'stat' in infile:
+        process = stats
+        out = 'stats.ods'
+    else:
+        raise ValueError('Invalid filename.', infile)
+        
+    f = open(file,'r')
+    lst = []
+    m = -1
+    s = -1
+    d = -1
+    
+    # read in the data and put into a multi-D dictionary that will allow for pretty printing
+    for cin in f:
+        try:
+            m, s, d = cin.strip('.txt\n').split('_')
+        except:
+            process(cin)
+    
+    # data is in multidimensional dictionary.  Send to printer (writer)
+    write_table_from_dict(results, num_entries, num_decisions, out)
+    
+def write_table_from_dict(dictionary, entries, decisions, outfile):
+    def medians():
+        spl = dictionary.keys()[0]
+        dpt = dictionary[spl].keys()[0]
+        tmp = dictionary[spl][dpt].keys()
+        cout.write(','+',,'.join(tmp))
+        header = 'median,iqr,'*len(tmp)
+        cout.write("\nSpill-depth," + header + "\n")
+        for spill in dictionary:
+            for depth in dictionary[spill]:
+                tmp = [str(x[0]) + ',' + str(x[1]) for x in dictionary[spill][depth].values()]
+                cout.write(str(spill) + ' ' + str(depth) + ',' + ','.join(tmp) + "\n")
+    def stats():
+        for spill in dictionary:
+            for depth in dictionary[spill]:
+                ind = dictionary[spill][depth].keys()[0]
+                tmp = dictionary[spill][depth][ind].keys()
+                cout.write(str(spill) + ' ' + str(depth) + ',' + ','.join(tmp) + "\n")
+                for statistic in dictionary[spill][depth]:
+                    tmp = dictionary[spill][depth][statistic].values()
+                    cout.write(statistic + ',' + ','.join(tmp) + "\n")
+                newline = ','*(len(dictionary[spill][depth][statistic])+1)+"\n"
+                cout.write(newline*2)
+        
+    cout = open(outfile,'w')
+    
+    #this is a terrible kludge.  Fix eventually.
+    if 'median' in outfile:
+        printprocess = medians
+    else:
+        printprocess = stats
+    #cout = open('table.ods','w')
+    
+    # print number of entries and decisions for reference/interest
+    cout.write("" + str(entries) + 'entries , ' + str(decisions) + "decisions\n")
+    # print the whole dictionary in a particular order/way (using the keys as headers)
+    printprocess()
+                    
+def make_me_a_table(num_entries, num_decisions, infile=None):
+    rob = ResultFactory('name')
+    
+    file = infile or 'summary.txt'
+    f = open(file,'r')
+    lst = []
+    
+    # read in the data and put into separate Results objects
+    with cin as f:
+        try:
+            m, s, d = cin.strip('.txt').split('_') # strip removes all instances of everything passed, not exact matches.
+            if hasattr(bob, 'method'):
+                bob.add_values(lst)
+                lst = []
+            bob = rob.make_result(method=m, spill=s, depth=d)
+        except:
+            x,y = cin.split()
+            lst.append(dict(name = x, value = y))
+    
+    # data is in Result objects in ResultFactory.  Send to printer (writer)
+    write_table(rob, num_entries, num_decisions)
+    
+def write_table(data, num_entries, num_decisions):
+    #methods = # num of distinct methods?  Do I need to write a table, then go back and write the header?
+    # put everything into a dictionary, then pull it out in a comprehensible order
     for x in xrange(2*len(methods)+1):
         out.write(',')
     cout = "\n,data = " + str(num_entries) + ', ' + str(num_decisions) + "decisions"
@@ -215,6 +353,7 @@ def make_table(methods, spills, tree_depths, num_entries, num_decisions, summary
                 out.write(pf[a][b][m] + ',') # how to reference?
     """    
             
-#strip_csv('mccabes_mc12.csv',0)            
-make_stats()
+#strip_csv('cassandra.csv',0)            
+#make_stats()
+del_txt()
 #need to cut the first element off of mccabes_mc12 before using

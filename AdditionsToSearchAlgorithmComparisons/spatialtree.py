@@ -156,9 +156,7 @@ class spatialtree(object):
         elif kwargs['rule'] == 'random':
             splitF  =   self.__random
         elif kwargs['rule'] == 'spectral':
-            print("under construction")
-            sys.exit(0)
-            #splitF  =   self.__spectral
+            splitF  =   self.__spectral
         else:
             raise ValueError('Unsupported split rule: %s' % kwargs['rule'])
         
@@ -617,7 +615,7 @@ class spatialtree(object):
             min_val = numpy.minimum(min_val, Wx)
             max_val = numpy.maximum(max_val, Wx)
             pass
-        
+
         elapsed = timeit.default_timer() - start_time
         #print(str(elapsed)+',')
         return W[numpy.argmax(max_val - min_val)]
@@ -627,10 +625,7 @@ class spatialtree(object):
         def distance(a, b):
             """ calculates normalized Euclidean distance between two N-dimensional points.
             """
-            dist = 0
-            for i in xrange(self.__d):
-                dist += (b[i] - a[i])**2
-            return sqrt(dist/len(data[0]))
+            return numpy.linalg.norm(a-b)
         
         def furthest(point, datapoints):
             max = -1
@@ -668,31 +663,47 @@ class spatialtree(object):
         (leading eigenvector of the covariance matrix) of data in 
         the current node.
         '''
+        
         start_time = timeit.default_timer()
-        # first moment
-        moment_1 = numpy.zeros(self.__d)
-
-        # second moment
-        moment_2 = numpy.zeros((self.__d, self.__d))
-
-        # Compute covariance matrix
-        for i in self.__indices:
-            moment_1 += data[i]
-            moment_2 += numpy.outer(data[i], data[i])
-            pass
-
-        # the mean
-        moment_1    /= len(self)
-
-        # the covariance
-        sigma       = (moment_2 - (len(self) * numpy.outer(moment_1, moment_1))) / (len(self)- 1.0)
-
-        # eigendecomposition
-        (l, v)      = numpy.linalg.eigh(sigma)
+        # Normalize software metrics .
+        # find mean(x), sd(x)
+        #zros = numpy.zeros(len(data))
+        mean = numpy.mean(data,axis=0)
+        #print(zros)
+        #print(mean)
+        #print(data)
+        std = numpy.std(data,axis=0)
+        #data[True] = (data - mean) / std 
+        normA = data
+        #normA = apply (A , 2 , function ( x ) {( x - mean ( x ) )/ sd(x ) })
+        #normalize all columns by said values
         
-        # top eigenvector
-        w           = v[:,numpy.argmax(l)]
+        # Construct the weighted adjacency matrix W . - i.e. matrix multiply normA by normA transpose
+        W = numpy.dot(normA.transpose(), normA)
         
+        # Set all negative values to zero .
+        W [W < 0] = 0
+        
+        # Set the self - similarity to zero .
+        numpy.fill_diagonal(W, 0)
+        #W = W - diag ( diag ( W) ) # i.e. set diagonal elements to 0
+        
+        # Construct the symmetric Laplacian matrix Lsym .
+        #Dnsqrt = diag (1/ sqrt ( rowSums ( W ) ) )
+        Dnsqrt = numpy.diag([1.0/numpy.sqrt(x) for x in numpy.sum(W, axis=0)])
+        I = numpy.identity(len(W))
+        #Lsym = I - Dnsqrt %* % W %* % Dnsqrt
+        Lsym = I - numpy.dot(Dnsqrt,W).dot(Dnsqrt)
+        
+        # Perform the eigendecomposition .
+        (l, v)      = numpy.linalg.eigh(Lsym)
+        #ret_ egn = eigen ( Lsym , symmetric = TRUE )
+        #sorted(v, key=lambda x: numpy.sum(x))
+        # Pick up the second smallest eigenvector .
+        w = v[1]
+        #v1 = Dnsqrt %* % ret _egn$ vectors [ , nrow ( W ) -1]
+        #v1 = v1 / sqrt ( sum ( v1 ^2) ) # is there a reason this is being normalized?  Is what was calculated in the last step not the e-vect?
+
         elapsed = timeit.default_timer() - start_time
         #print(str(elapsed)+',')
         return w
