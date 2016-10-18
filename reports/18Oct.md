@@ -24,12 +24,14 @@ This behavior and ceiling effects are predominantly due to a Mccabes dataset, fo
 
 On datasets which were not either universally good or universally bad, spill had marginal improvement on the median recall due to ceiling effects.  However the difference in variation between the 0.01 (top) and 0.1 (bottom) spill rates is impressive.  
 
-tomcat and cassandra defect datasets both show this pattern of behavior as well, with Where's iqr dropping from .6 to .1 on cassandra.
+tomcat and cassandra defect datasets both show this pattern of behavior as well, with Where's iqr dropping from .6 to .1 on cassandra.  The spill technique appears to work well on defect-type datasets, with less (sometimes no) effect on heavily-binary classification datasets.
 
 Cassandra
+
 <img width=800 src="../data/1000Samples/dataCompilation/cassiestats.png">
 
 Tomcat
+
 <img width=800 src="../data/1000Samples/dataCompilation/tomcatstats.png">
 
 
