@@ -1,4 +1,4 @@
-DOING: Examining output from stats.py for meaningful patterns in non-recall indicators.
+DOING: Examining output from stats.py for meaningful patterns in non-recall indicators, rerunning experiments on one dataset that gave recall=0 for all methods, tree depths, spill rates.
 
 DONE: stats.py integrated with my setup, partially automated (generates data automatically, doesn't help analyze).  Examination of recall stats suggests increasing spill rates result in modest improvement in recall median but significant improvement in variation.
 
