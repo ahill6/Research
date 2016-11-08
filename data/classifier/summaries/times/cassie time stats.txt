@@ -1,0 +1,1121 @@
+rank ,         name ,    med   ,  iqr 
+----------------------------------------------------
+   1 , k_3_0.2_13_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_7_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0_7_bookkeeper_kd_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_9_bookkeeper_spectral_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.1_11_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_spectral_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_11_bookkeeper_pca_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.1_5_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.2_7_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.05_11_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.1_5_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.2_11_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_rp_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.1_7_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_7_bookkeeper_random_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.01_7_bookkeeper_kd_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_13_bookkeeper_spectral_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_11_bookkeeper_kd_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.25_9_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0_5_bookkeeper_random_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0.25_11_bookkeeper_spectral_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.25_13_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.1_9_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.2_7_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_kd_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_pca_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0.15_11_bookkeeper_random_times ,       0  ,     1 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.15_13_bookkeeper_random_times ,       0  ,     1 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0.05_13_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_9_bookkeeper_rp_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.2_13_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_9_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_7_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0.05_9_bookkeeper_random_times ,       0  ,     1 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.25_11_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_11_bookkeeper_rp_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.25_5_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_9_bookkeeper_kd_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_7_bookkeeper_rp_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.01,  0.02
+   1 , k_3_0_11_bookkeeper_spectral_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_13_bookkeeper_kd_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.01_9_bookkeeper_spectral_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_7_bookkeeper_pca_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.25_7_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_9_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.15_7_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.01_9_bookkeeper_pca_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.15_11_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_7_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_7_bookkeeper_spectral_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_pca_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_spectral_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.05_5_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_random_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_9_bookkeeper_random_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.2_9_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_kd_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_kd_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_11_bookkeeper_random_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.05_9_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_13_bookkeeper_pca_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_spectral_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0_13_bookkeeper_random_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.01_13_bookkeeper_rp_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_kd_times.txt ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.02
+   1 , k_3_0.05_7_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_9_bookkeeper_kd_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.2_5_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.15_9_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.01_7_bookkeeper_spectral_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0_13_bookkeeper_rp_times.txt ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.15_5_bookkeeper_random_times ,       0  ,     2 (*              |              ), 0.00,  0.00,  0.00,  0.02,  0.02
+   1 , k_3_0.05_7_bookkeeper_rp_times ,       1  ,     2 (*              |              ), 0.00,  0.00,  0.01,  0.02,  0.02
+   1 , k_3_0.15_13_bookkeeper_rp_times ,       1  ,     2 (*              |              ), 0.00,  0.00,  0.01,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_pca_times.txt ,       1  ,     2 (*              |              ), 0.00,  0.00,  0.01,  0.02,  0.02
+   1 , k_3_0_5_accumulo_random_times.txt ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0_9_accumulo_random_times.txt ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0_7_accumulo_random_times.txt ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0_13_accumulo_random_times.txt ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0.01_9_accumulo_random_times ,       1  ,     1 (*              |              ), 0.01,  0.01,  0.01,  0.02,  0.02
+   1 , k_3_0.01_5_accumulo_random_times ,       1  ,     1 (*              |              ), 0.01,  0.01,  0.01,  0.02,  0.02
+   1 , k_3_0_11_accumulo_random_times.txt ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0.01_13_accumulo_random_times ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0.01_7_accumulo_random_times ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0.01_11_accumulo_random_times ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.02
+   1 , k_3_0.05_11_accumulo_random_times ,       1  ,     1 (*              |              ), 0.01,  0.01,  0.01,  0.02,  0.02
+   1 , k_3_0.05_7_accumulo_random_times ,       1  ,     1 (*              |              ), 0.01,  0.01,  0.01,  0.02,  0.02
+   1 , k_3_0.05_13_accumulo_random_times ,       1  ,     1 (*              |              ), 0.01,  0.01,  0.01,  0.02,  0.02
+   1 , k_3_0.05_9_accumulo_random_times ,       2  ,     1 (*              |              ), 0.01,  0.01,  0.02,  0.02,  0.02
+   1 , k_3_0.05_5_accumulo_random_times ,       2  ,     1 (*              |              ), 0.01,  0.01,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_5_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.2_5_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_7_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_5_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_9_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_9_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_5_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_13_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_9_bookkeeper_entropic_times.txt ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_7_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_5_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_9_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_7_bookkeeper_where_times.txt ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_11_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_pca_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_5_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_13_bookkeeper_where_times.txt ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_13_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_5_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_7_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_entropic_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_9_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_7_bookkeeper_pca_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_5_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_7_bookkeeper_pca_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_5_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_9_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_7_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_where_times.txt ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.1_7_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_7_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_7_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_9_bookkeeper_where_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.2_7_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.00,  0.01,  0.02,  0.02,  0.03
+   1 , k_3_0.01_7_bookkeeper_entropic_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_9_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_13_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_5_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_9_bookkeeper_pca_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_5_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_11_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_9_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_5_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.15_5_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_7_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_11_bookkeeper_entropic_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_where_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_9_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_7_bookkeeper_where_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.25_7_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_11_bookkeeper_where_times.txt ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_5_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.2_11_bookkeeper_rp_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_9_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.2_11_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_11_bookkeeper_where_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_where_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_7_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_9_bookkeeper_where_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_5_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.01_13_cassandra_random_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.2_7_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_11_cassandra_random_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.25_9_bookkeeper_spectral_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_bookkeeper_pca_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_13_bookkeeper_spectral_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.01,  0.02,  0.02,  0.02
+   1 , k_3_0.1_9_bookkeeper_rp_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_9_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_bookkeeper_entropic_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_9_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_11_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.25_11_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.2_5_bookkeeper_kd_times ,       2  ,     2 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_5_cassandra_random_times.txt ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_9_bookkeeper_pca_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_5_bookkeeper_entropic_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_7_bookkeeper_pca_times ,       2  ,     1 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_7_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_5_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_7_bookkeeper_entropic_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_5_bookkeeper_entropic_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.2_11_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_5_cassandra_random_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.2_11_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0_9_cassandra_random_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_5_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_9_bookkeeper_entropic_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_5_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0_9_camel_random_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_9_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_camel_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_9_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_13_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.2_13_bookkeeper_spectral_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.2_7_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.01,  0.02,  0.02,  0.02
+   1 , k_3_0.05_13_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_13_cassandra_random_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_13_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.01,  0.02,  0.02,  0.02
+   1 , k_3_0.1_5_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_13_bookkeeper_entropic_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_9_bookkeeper_spectral_times ,       2  ,     2 (*              |              ), 0.00,  0.00,  0.02,  0.02,  0.02
+   1 , k_3_0.05_13_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.15_11_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.01,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_7_bookkeeper_entropic_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_9_cassandra_random_times ,       2  ,     2 (*              |              ), 0.00,  0.01,  0.02,  0.02,  0.03
+   1 , k_3_0.2_9_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.01_7_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_7_cassandra_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_5_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_13_bookkeeper_entropic_times.txt ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.25_13_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_11_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_5_bookkeeper_where_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.2_13_bookkeeper_pca_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_9_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_7_cassandra_random_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_5_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_7_camel_random_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_9_cassandra_random_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_13_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_5_bookkeeper_entropic_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_11_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_7_bookkeeper_kd_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.05_11_cassandra_random_times ,       2  ,     0 (*              |              ), 0.00,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.25_9_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_5_cassandra_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_11_cassandra_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_9_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_7_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_13_camel_random_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_7_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_11_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_11_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_13_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_7_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_13_cassandra_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_13_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_9_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_13_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_13_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_11_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_7_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_9_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_9_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_7_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_11_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.15_7_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_7_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_5_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_13_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_11_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_9_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_5_camel_random_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_5_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_9_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_9_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_5_camel_random_times ,       2  ,     1 (*              |              ), 0.00,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_7_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_13_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.01_11_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.15_11_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_5_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_5_camel_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_11_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_7_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_7_camel_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_9_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_13_bookkeeper_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_5_camel_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_5_accumulo_rp_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_9_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.02
+   1 , k_3_0.1_13_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_9_cassandra_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_7_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_5_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_7_accumulo_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_13_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.05_5_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_11_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.04
+   1 , k_3_0_11_accumulo_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.15_5_camel_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.15_7_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.2_11_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_9_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.25_11_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_7_bookkeeper_where_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_9_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_5_accumulo_kd_times.txt ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.01_5_accumulo_kd_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_9_accumulo_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_13_accumulo_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_9_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_5_bookkeeper_entropic_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_7_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.05_11_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.07
+   1 , k_3_0.05_13_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.05_5_accumulo_kd_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_5_accumulo_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.05
+   1 , k_3_0.1_11_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_5_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_11_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_13_accumulo_random_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_7_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.15_7_accumulo_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.1_13_accumulo_rp_times ,       2  ,     0 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0_11_cassandra_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.05_9_cassandra_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.15_9_accumulo_random_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.02,  0.03
+   1 , k_3_0.1_9_accumulo_rp_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0_9_cassandra_rp_times.txt ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.04
+   1 , k_3_0.05_11_accumulo_spectral_times ,       2  ,     1 (*              |              ), 0.02,  0.02,  0.02,  0.03,  0.03
+   1 , k_3_0.01_13_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.1_13_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.1_7_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.05_9_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.1_5_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.1_5_accumulo_kd_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0_11_camel_random_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.2_7_accumulo_random_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.1_9_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.05_13_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.2_11_accumulo_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.2_5_accumulo_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.2_9_accumulo_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.1_11_accumulo_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.05_13_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.2_13_accumulo_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.25_13_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.05_5_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.05_11_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.05_7_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.01_11_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_5_accumulo_kd_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.1_5_cassandra_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.25_5_accumulo_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_9_cassandra_rp_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.01_5_cassandra_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0_5_cassandra_rp_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0_7_accumulo_kd_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0_7_cassandra_rp_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.01_11_accumulo_pca_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_7_accumulo_kd_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_5_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.2_5_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0_7_accumulo_pca_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_13_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0_7_accumulo_spectral_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_7_cassandra_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.1_9_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_13_accumulo_pca_times.txt ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.1_11_cassandra_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0_11_accumulo_pca_times.txt ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0_9_accumulo_spectral_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.05_5_bookkeeper_where_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.2_9_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_9_bookkeeper_where_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.05_5_camel_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_13_bookkeeper_where_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0_13_camel_rp_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0_5_cassandra_kd_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.2_13_bookkeeper_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.01_5_camel_rp_times ,       3  ,     3 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.05_11_bookkeeper_where_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.25_5_bookkeeper_where_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.25_5_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0_7_cassandra_spectral_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.15_5_cassandra_kd_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.15_13_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.1_5_camel_kd_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.05_13_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_11_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.2_13_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.2_11_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.15_5_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.2_13_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.01_11_camel_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.01_13_camel_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_13_camel_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_7_camel_random_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.2_5_camel_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.01_5_cassandra_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.05_5_cassandra_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.25_7_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_7_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.01_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.1_7_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0_13_cassandra_rp_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.04
+   1 , k_3_0.01_5_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.15_9_cassandra_random_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_9_cassandra_spectral_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_7_camel_rp_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.1_9_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0_5_cassandra_spectral_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.2_5_bookkeeper_entropic_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_9_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.25_13_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_7_camel_rp_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_7_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_13_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.1_13_cassandra_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_5_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.05_7_camel_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.01_11_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.1_11_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.25_7_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.01_9_camel_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0_5_camel_kd_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.15_9_camel_random_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.2_9_camel_random_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_13_cassandra_spectral_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.03
+   1 , k_3_0.25_13_bookkeeper_kd_times ,       3  ,     2 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.2_7_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.2_5_camel_random_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.01_7_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_9_camel_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.05_11_camel_rp_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_9_camel_random_times ,       3  ,     3 (*              |              ), 0.02,  0.02,  0.03,  0.03,  0.05
+   1 , k_3_0.25_5_cassandra_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.05_13_camel_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_5_camel_random_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_13_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_11_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_5_camel_spectral_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_9_cassandra_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_13_camel_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_5_camel_rp_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_11_camel_spectral_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_11_cassandra_spectral_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0_9_camel_spectral_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.2_5_cassandra_kd_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.25_5_cassandra_random_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0_11_camel_rp_times.txt ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_11_camel_random_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.01_5_camel_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.25_11_cassandra_random_times ,       3  ,     3 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.01_7_camel_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.15_11_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.1_5_cassandra_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.1_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_13_camel_spectral_times.txt ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.2_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.05_7_camel_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.1_5_cassandra_kd_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.15_5_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0_9_camel_rp_times.txt ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.2_9_cassandra_random_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_7_camel_spectral_times.txt ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.01_9_camel_spectral_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.25_9_cassandra_random_times ,       3  ,     1 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.01_11_camel_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.05_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.25_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.15_7_camel_random_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.05_5_camel_rp_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.05
+   1 , k_3_0.2_7_cassandra_random_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.05_5_camel_spectral_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.2_11_camel_random_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.25_5_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.06
+   1 , k_3_0.15_7_camel_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.2_13_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.05_9_camel_spectral_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_7_cassandra_kd_times.txt ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.1_13_camel_random_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0_7_camel_kd_times.txt ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.05_7_cassandra_kd_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.05_7_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.02,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0_5_accumulo_pca_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.25_5_accumulo_kd_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_7_accumulo_kd_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.05_11_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0_5_accumulo_spectral_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_9_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0_11_accumulo_spectral_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_9_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.01_13_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_7_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.01_5_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.04
+   1 , k_3_0.01_11_accumulo_spectral_times ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.05_5_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0_13_accumulo_spectral_times.txt ,       3  ,     0 (*              |              ), 0.03,  0.03,  0.03,  0.03,  0.03
+   1 , k_3_0.05_7_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.1_11_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0_9_accumulo_pca_times.txt ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.05_13_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.1_7_accumulo_kd_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.04
+   1 , k_3_0.1_5_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.1_7_cassandra_rp_times ,       3  ,     2 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.07
+   1 , k_3_0.01_7_accumulo_pca_times ,       3  ,     1 (*              |              ), 0.03,  0.03,  0.03,  0.04,  0.05
+   1 , k_3_0.05_11_camel_spectral_times ,       3  ,     2 (*              |              ), 0.02,  0.03,  0.03,  0.05,  0.05
+   1 , k_3_0.1_13_accumulo_pca_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.05
+   1 , k_3_0.1_7_accumulo_pca_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.04
+   1 , k_3_0.05_5_accumulo_spectral_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.04
+   1 , k_3_0.1_9_accumulo_pca_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.04
+   1 , k_3_0.15_11_accumulo_rp_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.04
+   1 , k_3_0.15_5_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.03,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_13_accumulo_rp_times ,       4  ,     2 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.05
+   1 , k_3_0.05_9_accumulo_pca_times ,       4  ,     1 (*              |              ), 0.03,  0.03,  0.04,  0.04,  0.04
+   1 , k_3_0_9_accumulo_kd_times.txt ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.01_9_accumulo_kd_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.2_5_accumulo_kd_times ,       4  ,     1 (*              |              ), 0.03,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.01_7_cassandra_kd_times ,       4  ,     2 (*              |              ), 0.03,  0.03,  0.04,  0.05,  0.05
+   1 , k_3_0_5_camel_pca_times.txt ,       4  ,     2 (*              |              ), 0.03,  0.03,  0.04,  0.05,  0.06
+   1 , k_3_0.1_7_cassandra_kd_times ,       4  ,     2 (*              |              ), 0.03,  0.03,  0.04,  0.05,  0.06
+   1 , k_3_0.15_13_camel_random_times ,       4  ,     2 (*              |              ), 0.02,  0.03,  0.04,  0.05,  0.05
+   1 , k_3_0.2_5_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.2_7_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.2_11_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_7_accumulo_kd_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.2_9_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.2_13_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_7_accumulo_rp_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.07
+   1 , k_3_0.05_9_accumulo_kd_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.25_7_accumulo_random_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.2_7_accumulo_spectral_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.05
+   1 , k_3_0.15_9_accumulo_rp_times ,       4  ,     1 (*              |              ), 0.03,  0.04,  0.04,  0.05,  0.06
+   1 , k_3_0.15_5_accumulo_spectral_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.04
+   1 , k_3_0.15_9_accumulo_spectral_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_11_accumulo_spectral_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.25_9_accumulo_random_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_7_accumulo_spectral_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.25_5_accumulo_rp_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.15_13_accumulo_spectral_times ,       4  ,     0 (*              |              ), 0.04,  0.04,  0.04,  0.04,  0.05
+   1 , k_3_0.2_9_accumulo_spectral_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.05
+   1 , k_3_0_11_accumulo_kd_times.txt ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.05
+   1 , k_3_0.15_5_cassandra_rp_times ,       4  ,     1 (*              |              ), 0.03,  0.04,  0.04,  0.05,  0.06
+   1 , k_3_0.1_9_accumulo_kd_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.05
+   1 , k_3_0.2_5_accumulo_spectral_times ,       4  ,     1 (*              |              ), 0.04,  0.04,  0.04,  0.05,  0.05
+   1 , k_3_0.15_13_cassandra_rp_times ,       5  ,     3 (*              |              ), 0.03,  0.03,  0.05,  0.06,  0.07
+   1 , k_3_0.25_13_accumulo_random_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.2_13_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.01_11_accumulo_kd_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.1_7_camel_rp_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.15_9_camel_rp_times ,       5  ,     2 (*              |              ), 0.03,  0.04,  0.05,  0.06,  0.07
+   1 , k_3_0.15_7_cassandra_kd_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0_11_cassandra_pca_times.txt ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.05
+   1 , k_3_0.01_13_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.05
+   1 , k_3_0.01_11_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.05_9_cassandra_kd_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.01_7_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.01_5_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.05
+   1 , k_3_0.2_7_cassandra_kd_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0_5_cassandra_pca_times.txt ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.05
+   1 , k_3_0.01_11_camel_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.05_7_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.01_9_cassandra_kd_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.1_5_camel_rp_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.07
+   1 , k_3_0.01_9_camel_pca_times ,       5  ,     0 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_13_cassandra_pca_times.txt ,       5  ,     2 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.05
+   1 , k_3_0_11_camel_pca_times.txt ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_9_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.1_11_cassandra_pca_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_9_cassandra_pca_times.txt ,       5  ,     1 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.01_5_camel_pca_times ,       5  ,     1 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.01_11_cassandra_kd_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_9_camel_kd_times ,       5  ,     1 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.1_7_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0_9_camel_kd_times.txt ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.1_9_camel_kd_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.07
+   1 , k_3_0.01_9_accumulo_entropic_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.1_9_camel_rp_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.05_5_cassandra_pca_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.01_9_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.05
+   1 , k_3_0.1_13_camel_rp_times ,       5  ,     1 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.1_13_cassandra_pca_times ,       5  ,     2 (*              |              ), 0.03,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0_9_cassandra_kd_times.txt ,       5  ,     3 (*              |              ), 0.03,  0.03,  0.05,  0.06,  0.06
+   1 , k_3_0.01_11_accumulo_entropic_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.05_13_cassandra_pca_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.05
+   1 , k_3_0.05_11_cassandra_pca_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_7_cassandra_pca_times.txt ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.05
+   1 , k_3_0_9_camel_pca_times.txt ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_9_accumulo_entropic_times.txt ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_11_camel_rp_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_9_camel_kd_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.05_11_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_7_camel_rp_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_7_accumulo_entropic_times.txt ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.15_5_camel_rp_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_5_accumulo_entropic_times.txt ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.01_5_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_9_cassandra_pca_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.25_9_camel_kd_times ,       5  ,     0 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.08
+   1 , k_3_0.01_9_camel_kd_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.1_9_cassandra_kd_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.01_7_accumulo_entropic_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.01_13_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_9_camel_rp_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.01_7_camel_pca_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_11_accumulo_entropic_times.txt ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.15_9_camel_kd_times ,       5  ,     0 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.07
+   1 , k_3_0.05_11_camel_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.01_13_camel_pca_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0_7_camel_pca_times.txt ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_5_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_9_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.05_7_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_5_camel_pca_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.25_7_cassandra_kd_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.1_5_cassandra_pca_times ,       5  ,     3 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_11_cassandra_rp_times ,       5  ,     3 (*              |              ), 0.03,  0.03,  0.05,  0.05,  0.06
+   1 , k_3_0.2_7_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.05_9_camel_pca_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_11_camel_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0_13_camel_pca_times.txt ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.15_13_camel_rp_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_5_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_11_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_5_camel_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.15_5_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_7_cassandra_rp_times ,       5  ,     0 (*              |              ), 0.03,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_9_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_11_camel_rp_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.15_7_cassandra_spectral_times ,       5  ,     0 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_13_camel_rp_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.09
+   1 , k_3_0.1_9_camel_spectral_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_13_camel_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0_13_accumulo_entropic_times.txt ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.25_13_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_13_accumulo_entropic_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_9_cassandra_rp_times ,       5  ,     0 (*              |              ), 0.04,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.2_5_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.2_11_accumulo_spectral_times ,       5  ,     2 (*              |              ), 0.04,  0.04,  0.05,  0.06,  0.07
+   1 , k_3_0.2_11_cassandra_rp_times ,       5  ,     2 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.25_11_accumulo_random_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.25_11_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.05_13_camel_pca_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.05_7_camel_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_9_cassandra_rp_times ,       5  ,     2 (*              |              ), 0.04,  0.04,  0.05,  0.06,  0.11
+   1 , k_3_0.15_7_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.06
+   1 , k_3_0.25_7_accumulo_kd_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0_13_accumulo_kd_times.txt ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.05_11_accumulo_kd_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.05
+   1 , k_3_0.25_11_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.04,  0.05,  0.05,  0.07
+   1 , k_3_0.25_7_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_9_accumulo_kd_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.05
+   1 , k_3_0.15_11_accumulo_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.07
+   1 , k_3_0.2_11_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_7_accumulo_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_7_accumulo_pca_times ,       5  ,     0 (*              |              ), 0.05,  0.05,  0.05,  0.05,  0.06
+   1 , k_3_0.15_13_accumulo_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.25_9_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.2_13_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.15_11_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.25_5_cassandra_rp_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0_11_camel_kd_times.txt ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.05_11_camel_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_11_cassandra_kd_times ,       5  ,     2 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.25_11_camel_random_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.15_9_accumulo_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.25_9_camel_random_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.1_11_accumulo_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.01_11_camel_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.15_11_camel_rp_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0_11_cassandra_kd_times.txt ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.2_7_camel_rp_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.05_11_cassandra_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.1_5_camel_spectral_times ,       5  ,     1 (*              |              ), 0.04,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.25_13_camel_random_times ,       5  ,     2 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.15_13_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.03,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.15_5_accumulo_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.01_13_accumulo_kd_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.06
+   1 , k_3_0.2_13_accumulo_pca_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.07
+   1 , k_3_0.25_13_cassandra_spectral_times ,       5  ,     1 (*              |              ), 0.05,  0.05,  0.05,  0.06,  0.08
+   1 , k_3_0.25_7_cassandra_rp_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.07
+   1 , k_3_0.2_11_accumulo_pca_times ,       6  ,     0 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.2_7_accumulo_pca_times ,       6  ,     2 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.07
+   1 , k_3_0.05_13_accumulo_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.2_13_accumulo_spectral_times ,       6  ,     0 (*              |              ), 0.04,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.2_9_accumulo_pca_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.09
+   1 , k_3_0.1_13_accumulo_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.2_5_accumulo_pca_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.25_5_camel_rp_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.2_9_cassandra_kd_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.25_7_camel_random_times ,       6  ,     2 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.07
+   1 , k_3_0.25_9_cassandra_spectral_times ,       6  ,     1 (*              |              ), 0.03,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.25_5_cassandra_spectral_times ,       6  ,     1 (*              |              ), 0.04,  0.05,  0.06,  0.06,  0.07
+   1 , k_3_0_9_cassandra_entropic_times.txt ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.15_9_cassandra_kd_times ,       6  ,     1 (*              |              ), 0.04,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.15_11_camel_kd_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.1_13_accumulo_entropic_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.06
+   1 , k_3_0.15_7_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.1_13_camel_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.07
+   1 , k_3_0.15_5_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.1_9_accumulo_entropic_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.06
+   1 , k_3_0.05_9_accumulo_entropic_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.06
+   1 , k_3_0.2_11_camel_kd_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0.25_11_camel_kd_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.06
+   1 , k_3_0.1_7_accumulo_entropic_times ,       6  ,     0 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.1_5_accumulo_entropic_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.06
+   1 , k_3_0.2_5_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.08
+   1 , k_3_0_13_cassandra_kd_times.txt ,       6  ,     1 (*              |              ), 0.05,  0.05,  0.06,  0.06,  0.07
+   1 , k_3_0_13_camel_kd_times.txt ,       6  ,     0 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.07
+   1 , k_3_0.01_13_cassandra_kd_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.09
+   1 , k_3_0.1_11_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.07
+   1 , k_3_0_11_cassandra_entropic_times.txt ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0_5_cassandra_entropic_times.txt ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.1_7_camel_spectral_times ,       6  ,     0 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0.15_9_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.05_13_cassandra_kd_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.09
+   1 , k_3_0.15_13_camel_spectral_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.01_7_cassandra_entropic_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.08
+   1 , k_3_0.01_13_camel_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.06
+   1 , k_3_0_13_cassandra_entropic_times.txt ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.2_11_camel_spectral_times ,       6  ,     3 (*              |              ), 0.05,  0.05,  0.06,  0.08,  0.08
+   1 , k_3_0.2_13_camel_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.08
+   1 , k_3_0.25_13_camel_kd_times ,       6  ,     1 (*              |              ), 0.06,  0.06,  0.06,  0.07,  0.09
+   1 , k_3_0.05_13_camel_kd_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.06,  0.08
+   1 , k_3_0.01_11_cassandra_entropic_times ,       6  ,     1 (*              |              ), 0.05,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.01_13_cassandra_entropic_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.08
+   1 , k_3_0.25_5_camel_spectral_times ,       6  ,     3 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.08
+   1 , k_3_0.2_7_camel_spectral_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.08
+   1 , k_3_0.15_13_camel_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.08
+   1 , k_3_0.25_7_accumulo_rp_times ,       6  ,     1 (*              |              ), 0.06,  0.06,  0.06,  0.07,  0.09
+   1 , k_3_0.15_5_cassandra_pca_times ,       6  ,     2 (*              |              ), 0.05,  0.06,  0.06,  0.08,  0.08
+   1 , k_3_0.25_5_accumulo_pca_times ,       6  ,     1 (*              |              ), 0.06,  0.06,  0.06,  0.07,  0.08
+   1 , k_3_0.15_11_accumulo_kd_times ,       6  ,     0 (*              |              ), 0.06,  0.06,  0.06,  0.06,  0.07
+   1 , k_3_0.05_11_cassandra_entropic_times ,       6  ,     2 (*              |              ), 0.06,  0.06,  0.06,  0.08,  0.09
+   1 , k_3_0.2_9_accumulo_kd_times ,       7  ,     1 (*              |              ), 0.06,  0.06,  0.07,  0.07,  0.09
+   1 , k_3_0.15_9_cassandra_pca_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.2_11_accumulo_kd_times ,       7  ,     0 (*              |              ), 0.06,  0.07,  0.07,  0.07,  0.07
+   1 , k_3_0.25_9_accumulo_kd_times ,       7  ,     1 (*              |              ), 0.06,  0.07,  0.07,  0.07,  0.08
+   1 , k_3_0.25_11_accumulo_rp_times ,       7  ,     1 (*              |              ), 0.07,  0.07,  0.07,  0.08,  0.09
+   1 , k_3_0.25_9_accumulo_rp_times ,       7  ,     0 (*              |              ), 0.07,  0.07,  0.07,  0.07,  0.07
+   1 , k_3_0.25_5_accumulo_spectral_times ,       7  ,     0 (*              |              ), 0.06,  0.07,  0.07,  0.07,  0.07
+   1 , k_3_0.01_5_cassandra_entropic_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0_7_cassandra_entropic_times.txt ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0.01_9_cassandra_entropic_times ,       7  ,     2 (*              |              ), 0.06,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0.25_9_cassandra_kd_times ,       7  ,     3 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0.2_13_camel_spectral_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0.1_13_cassandra_kd_times ,       7  ,     2 (*              |              ), 0.06,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.05_13_cassandra_entropic_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.15_11_cassandra_kd_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.15_11_camel_spectral_times ,       7  ,     2 (*              |              ), 0.06,  0.06,  0.07,  0.08,  0.12
+   1 , k_3_0.1_9_camel_pca_times ,       7  ,     2 (*              |              ), 0.06,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.25_13_accumulo_rp_times ,       7  ,     1 (*              |              ), 0.06,  0.07,  0.07,  0.08,  0.10
+   1 , k_3_0.1_5_camel_pca_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.1_9_cassandra_entropic_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.01_9_camel_entropic_times ,       7  ,     2 (*              |              ), 0.06,  0.06,  0.07,  0.08,  0.09
+   1 , k_3_0.15_7_cassandra_pca_times ,       7  ,     2 (*              |              ), 0.05,  0.06,  0.07,  0.08,  0.08
+   1 , k_3_0.05_5_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.08
+   1 , k_3_0.1_11_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.2_13_accumulo_kd_times ,       8  ,     0 (*              |              ), 0.07,  0.08,  0.08,  0.08,  0.09
+   1 , k_3_0.1_7_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.05,  0.07,  0.08,  0.08,  0.09
+   1 , k_3_0.2_11_cassandra_kd_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.25_13_accumulo_spectral_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.08
+   1 , k_3_0_11_camel_entropic_times.txt ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.01_11_camel_entropic_times ,       8  ,     3 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.01_13_camel_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.10
+   1 , k_3_0.05_9_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.08,  0.09
+   1 , k_3_0.15_11_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0_13_camel_entropic_times.txt ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.08,  0.09
+   1 , k_3_0.05_7_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.08
+   1 , k_3_0.1_5_cassandra_entropic_times ,       8  ,     1 (*              |              ), 0.05,  0.07,  0.08,  0.08,  0.09
+   1 , k_3_0.15_13_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.08
+   1 , k_3_0.1_11_camel_pca_times ,       8  ,     1 (*              |              ), 0.05,  0.07,  0.08,  0.08,  0.09
+   1 , k_3_0.1_13_cassandra_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.25_11_cassandra_kd_times ,       8  ,     3 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0_5_camel_entropic_times.txt ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.25_11_camel_rp_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0_9_camel_entropic_times.txt ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.25_9_camel_rp_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.1_13_camel_pca_times ,       8  ,     3 (*              |              ), 0.06,  0.06,  0.08,  0.09,  0.09
+   1 , k_3_0_7_camel_entropic_times.txt ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.15_13_cassandra_kd_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.08,  0.11
+   1 , k_3_0.01_5_camel_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.2_9_camel_spectral_times ,       8  ,     2 (*              |              ), 0.05,  0.06,  0.08,  0.08,  0.09
+   1 , k_3_0.01_7_camel_entropic_times ,       8  ,     1 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.2_9_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.09,  0.11
+   1 , k_3_0.05_7_camel_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.09,  0.11
+   1 , k_3_0.05_5_camel_entropic_times ,       8  ,     1 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.05_13_camel_entropic_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.09,  0.11
+   1 , k_3_0.15_11_accumulo_entropic_times ,       8  ,     1 (*              |              ), 0.08,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.2_13_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.06,  0.08,  0.08,  0.10
+   1 , k_3_0.2_5_cassandra_pca_times ,       8  ,     3 (*              |              ), 0.05,  0.06,  0.08,  0.09,  0.09
+   1 , k_3_0.2_11_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.08,  0.11
+   1 , k_3_0.1_7_camel_pca_times ,       8  ,     3 (*              |              ), 0.06,  0.06,  0.08,  0.09,  0.10
+   1 , k_3_0.25_13_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.08,  0.09
+   1 , k_3_0.15_9_camel_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.15_13_camel_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.09,  0.10
+   1 , k_3_0.2_7_cassandra_pca_times ,       8  ,     3 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.15_9_accumulo_entropic_times ,       8  ,     1 (*              |              ), 0.08,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.15_13_accumulo_entropic_times ,       8  ,     1 (*              |              ), 0.08,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.15_5_camel_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.25_7_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.25_7_camel_rp_times ,       8  ,     2 (*              |              ), 0.06,  0.07,  0.08,  0.09,  0.11
+   1 , k_3_0.25_11_accumulo_kd_times ,       8  ,     1 (*              |              ), 0.08,  0.08,  0.08,  0.09,  0.09
+   1 , k_3_0.2_13_cassandra_kd_times ,       8  ,     1 (*              |              ), 0.07,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.15_7_camel_pca_times ,       8  ,     1 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.05_11_camel_entropic_times ,       8  ,     1 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.10
+   1 , k_3_0.25_5_cassandra_pca_times ,       8  ,     2 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.11
+   1 , k_3_0.15_11_camel_pca_times ,       8  ,     3 (*              |              ), 0.06,  0.06,  0.08,  0.09,  0.11
+   1 , k_3_0.25_9_cassandra_pca_times ,       8  ,     1 (*              |              ), 0.06,  0.08,  0.08,  0.09,  0.11
+   1 , k_3_0.25_11_cassandra_pca_times ,       9  ,     1 (*              |              ), 0.06,  0.08,  0.09,  0.09,  0.12
+   1 , k_3_0.25_13_cassandra_kd_times ,       9  ,     1 (*              |              ), 0.07,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.2_5_camel_pca_times ,       9  ,     3 (*              |              ), 0.07,  0.08,  0.09,  0.11,  0.12
+   1 , k_3_0.25_9_accumulo_pca_times ,       9  ,     2 (*              |              ), 0.08,  0.09,  0.09,  0.09,  0.10
+   1 , k_3_0.25_13_accumulo_pca_times ,       9  ,     1 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.10
+   1 , k_3_0.25_7_accumulo_pca_times ,       9  ,     1 (*              |              ), 0.08,  0.08,  0.09,  0.09,  0.10
+   1 , k_3_0.25_13_camel_rp_times ,       9  ,     1 (*              |              ), 0.06,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.15_13_accumulo_kd_times ,       9  ,     2 (*              |              ), 0.07,  0.08,  0.09,  0.10,  0.10
+   1 , k_3_0.25_11_accumulo_pca_times ,       9  ,     1 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.10
+   1 , k_3_0.25_5_camel_pca_times ,       9  ,     2 (*              |              ), 0.07,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.2_7_camel_pca_times ,       9  ,     2 (*              |              ), 0.07,  0.08,  0.09,  0.10,  0.12
+   1 , k_3_0.15_5_accumulo_entropic_times ,       9  ,     1 (*              |              ), 0.08,  0.08,  0.09,  0.09,  0.09
+   1 , k_3_0.2_13_camel_pca_times ,       9  ,     1 (*              |              ), 0.08,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.15_7_accumulo_entropic_times ,       9  ,     1 (*              |              ), 0.08,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.2_5_accumulo_entropic_times ,       9  ,     1 (*              |              ), 0.08,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0.05_9_camel_entropic_times ,       9  ,     1 (*              |              ), 0.06,  0.08,  0.09,  0.09,  0.11
+   1 , k_3_0_9_bookkeeper_2-means_times.txt ,       9  ,     2 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.11
+   1 , k_3_0.2_9_accumulo_entropic_times ,       9  ,     0 (*              |              ), 0.08,  0.09,  0.09,  0.09,  0.11
+   1 , k_3_0.2_7_accumulo_entropic_times ,       9  ,     3 (*              |              ), 0.08,  0.09,  0.09,  0.09,  0.11
+   1 , k_3_0.2_13_accumulo_entropic_times ,       9  ,     0 (*              |              ), 0.08,  0.09,  0.09,  0.09,  0.11
+   1 , k_3_0.2_11_camel_pca_times ,       9  ,     3 (*              |              ), 0.08,  0.08,  0.09,  0.10,  0.11
+   1 , k_3_0.2_9_camel_pca_times ,       9  ,     3 (*              |              ), 0.08,  0.08,  0.09,  0.10,  0.11
+   1 , k_3_0.2_11_accumulo_entropic_times ,       9  ,     0 (*              |              ), 0.09,  0.09,  0.09,  0.09,  0.11
+   1 , k_3_0.01_13_bookkeeper_2-means_times ,       9  ,     1 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.11
+   1 , k_3_0_5_bookkeeper_2-means_times.txt ,       9  ,     1 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.11
+   1 , k_3_0_7_bookkeeper_2-means_times.txt ,       9  ,     1 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.11
+   1 , k_3_0.01_11_bookkeeper_2-means_times ,       9  ,     2 (*              |              ), 0.08,  0.09,  0.09,  0.11,  0.13
+   1 , k_3_0.01_5_bookkeeper_2-means_times ,       9  ,     2 (*              |              ), 0.08,  0.09,  0.09,  0.10,  0.11
+   1 , k_3_0_13_bookkeeper_2-means_times.txt ,       9  ,     2 (*              |              ), 0.09,  0.09,  0.09,  0.10,  0.12
+   1 , k_3_0_7_accumulo_where_times.txt ,      10  ,     1 (*              |              ), 0.09,  0.09,  0.10,  0.10,  0.13
+   1 , k_3_0.05_11_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.12
+   1 , k_3_0.05_13_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.10
+   1 , k_3_0.05_5_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.12
+   1 , k_3_0.05_9_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.11
+   1 , k_3_0.01_13_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.10
+   1 , k_3_0.01_7_bookkeeper_2-means_times ,      10  ,     2 (*              |              ), 0.08,  0.09,  0.10,  0.11,  0.13
+   1 , k_3_0.01_11_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.11
+   1 , k_3_0.05_7_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.11
+   1 , k_3_0.01_9_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.12
+   1 , k_3_0.1_9_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.11
+   1 , k_3_0_9_accumulo_where_times.txt ,      10  ,     1 (*              |              ), 0.09,  0.10,  0.10,  0.11,  0.12
+   1 , k_3_0.01_9_bookkeeper_2-means_times ,      10  ,     2 (*              |              ), 0.08,  0.09,  0.10,  0.11,  0.13
+   1 , k_3_0.25_7_camel_spectral_times ,      10  ,     3 (*              |              ), 0.09,  0.09,  0.10,  0.12,  0.13
+   1 , k_3_0.25_13_accumulo_kd_times ,      10  ,     0 (*              |              ), 0.09,  0.10,  0.10,  0.10,  0.11
+   1 , k_3_0_11_bookkeeper_2-means_times.txt ,      10  ,     2 (*              |              ), 0.09,  0.10,  0.10,  0.11,  0.13
+   1 , k_3_0.1_11_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.12
+   1 , k_3_0.1_5_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.13
+   1 , k_3_0.01_7_accumulo_where_times ,      10  ,     4 (*              |              ), 0.09,  0.10,  0.10,  0.13,  0.17
+   1 , k_3_0_5_accumulo_where_times.txt ,      10  ,     2 (*              |              ), 0.09,  0.10,  0.10,  0.12,  0.14
+   1 , k_3_0.1_7_accumulo_where_times ,      10  ,     0 (*              |              ), 0.10,  0.10,  0.10,  0.10,  0.12
+   1 , k_3_0.1_13_accumulo_where_times ,      10  ,     2 (*              |              ), 0.10,  0.10,  0.10,  0.11,  0.14
+   1 , k_3_0.25_7_accumulo_spectral_times ,      11  ,     1 (*              |              ), 0.10,  0.10,  0.11,  0.11,  0.11
+   1 , k_3_0.25_9_accumulo_spectral_times ,      11  ,     1 (*              |              ), 0.10,  0.10,  0.11,  0.11,  0.11
+   1 , k_3_0.15_11_cassandra_entropic_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.13
+   1 , k_3_0.25_11_accumulo_spectral_times ,      11  ,     1 (*              |              ), 0.09,  0.10,  0.11,  0.11,  0.12
+   1 , k_3_0_13_accumulo_where_times.txt ,      11  ,     4 (*              |              ), 0.09,  0.10,  0.11,  0.13,  0.17
+   1 , k_3_0.05_11_cassandra_where_times ,      11  ,     3 (*              |              ), 0.09,  0.09,  0.11,  0.11,  0.13
+   1 , k_3_0_9_cassandra_where_times.txt ,      11  ,     4 (*              |              ), 0.09,  0.10,  0.11,  0.13,  0.14
+   1 , k_3_0.1_7_cassandra_where_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.11,  0.14
+   1 , k_3_0.25_13_camel_spectral_times ,      11  ,     4 (*              |              ), 0.08,  0.09,  0.11,  0.13,  0.14
+   1 , k_3_0.25_5_accumulo_entropic_times ,      11  ,     2 (*              |              ), 0.09,  0.09,  0.11,  0.11,  0.12
+   1 , k_3_0.15_13_cassandra_entropic_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.13
+   1 , k_3_0.05_5_cassandra_where_times ,      11  ,     4 (*              |              ), 0.08,  0.09,  0.11,  0.13,  0.14
+   1 , k_3_0.05_7_cassandra_where_times ,      11  ,     4 (*              |              ), 0.09,  0.09,  0.11,  0.12,  0.17
+   1 , k_3_0.01_13_cassandra_where_times ,      11  ,     2 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.16
+   1 , k_3_0.05_13_cassandra_where_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.13
+   1 , k_3_0.1_13_cassandra_where_times ,      11  ,     2 (*              |              ), 0.09,  0.11,  0.11,  0.13,  0.13
+   1 , k_3_0.25_9_camel_spectral_times ,      11  ,     2 (*              |              ), 0.08,  0.10,  0.11,  0.12,  0.13
+   1 , k_3_0.15_9_cassandra_entropic_times ,      11  ,     4 (*              |              ), 0.08,  0.10,  0.11,  0.12,  0.14
+   1 , k_3_0.1_9_cassandra_where_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.17
+   1 , k_3_0.25_11_camel_spectral_times ,      11  ,     4 (*              |              ), 0.08,  0.09,  0.11,  0.13,  0.13
+   1 , k_3_0.01_11_cassandra_where_times ,      11  ,     2 (*              |              ), 0.09,  0.11,  0.11,  0.12,  0.17
+   1 , k_3_0.15_7_cassandra_entropic_times ,      11  ,     2 (*              |              ), 0.09,  0.11,  0.11,  0.12,  0.14
+   1 , k_3_0.1_9_camel_entropic_times ,      11  ,     3 (*              |              ), 0.09,  0.10,  0.11,  0.13,  0.16
+   1 , k_3_0.05_9_cassandra_where_times ,      11  ,     4 (*              |              ), 0.09,  0.10,  0.11,  0.13,  0.15
+   1 , k_3_0.1_11_cassandra_where_times ,      11  ,     2 (*              |              ), 0.09,  0.10,  0.11,  0.12,  0.14
+   1 , k_3_0.15_5_cassandra_entropic_times ,      11  ,     1 (*              |              ), 0.09,  0.11,  0.11,  0.12,  0.13
+   1 , k_3_0.01_5_cassandra_where_times ,      11  ,     2 (*              |              ), 0.10,  0.11,  0.11,  0.12,  0.17
+   1 , k_3_0.1_5_cassandra_where_times ,      11  ,     3 ( *             |              ), 0.09,  0.10,  0.11,  0.13,  0.14
+   1 , k_3_0_7_cassandra_where_times.txt ,      12  ,     2 ( *             |              ), 0.09,  0.10,  0.12,  0.12,  0.16
+   1 , k_3_0.1_5_camel_entropic_times ,      12  ,     2 ( *             |              ), 0.09,  0.11,  0.12,  0.13,  0.16
+   1 , k_3_0_5_cassandra_where_times.txt ,      12  ,     2 ( *             |              ), 0.09,  0.11,  0.12,  0.13,  0.13
+   1 , k_3_0.01_7_cassandra_where_times ,      12  ,     2 ( *             |              ), 0.11,  0.11,  0.12,  0.13,  0.15
+   1 , k_3_0.01_9_cassandra_where_times ,      12  ,     3 ( *             |              ), 0.11,  0.11,  0.12,  0.13,  0.16
+   1 , k_3_0_11_cassandra_where_times.txt ,      12  ,     2 ( *             |              ), 0.09,  0.11,  0.12,  0.13,  0.15
+   1 , k_3_0_11_accumulo_where_times.txt ,      12  ,     4 ( *             |              ), 0.09,  0.11,  0.12,  0.14,  0.22
+   1 , k_3_0.1_13_camel_entropic_times ,      12  ,     3 ( *             |              ), 0.10,  0.11,  0.12,  0.13,  0.14
+   1 , k_3_0.2_7_cassandra_entropic_times ,      12  ,     2 ( *             |              ), 0.09,  0.11,  0.12,  0.13,  0.14
+   1 , k_3_0.15_13_camel_entropic_times ,      13  ,     3 (-*             |              ), 0.11,  0.11,  0.13,  0.14,  0.16
+   1 , k_3_0.1_11_camel_entropic_times ,      13  ,     3 ( *             |              ), 0.10,  0.11,  0.13,  0.14,  0.15
+   1 , k_3_0.2_5_cassandra_entropic_times ,      13  ,     2 ( *             |              ), 0.11,  0.11,  0.13,  0.13,  0.14
+   1 , k_3_0.2_9_cassandra_entropic_times ,      13  ,     3 (-*             |              ), 0.09,  0.11,  0.13,  0.13,  0.14
+   1 , k_3_0.15_5_camel_entropic_times ,      13  ,     2 (-*             |              ), 0.11,  0.12,  0.13,  0.14,  0.16
+   1 , k_3_0.1_7_camel_entropic_times ,      13  ,     3 ( *             |              ), 0.09,  0.11,  0.13,  0.14,  0.16
+   1 , k_3_0.01_11_camel_where_times ,      13  ,     3 (-*             |              ), 0.11,  0.12,  0.13,  0.14,  0.17
+   1 , k_3_0.25_5_cassandra_entropic_times ,      13  ,     2 ( *             |              ), 0.11,  0.12,  0.13,  0.14,  0.15
+   1 , k_3_0_11_camel_where_times.txt ,      13  ,     2 (-*             |              ), 0.11,  0.12,  0.13,  0.14,  0.16
+   1 , k_3_0_13_camel_where_times.txt ,      13  ,     2 ( *             |              ), 0.12,  0.13,  0.13,  0.15,  0.16
+   1 , k_3_0_13_cassandra_where_times.txt ,      13  ,     2 (-*             |              ), 0.10,  0.12,  0.13,  0.14,  0.19
+   1 , k_3_0.2_11_cassandra_entropic_times ,      13  ,     2 (-*             |              ), 0.11,  0.12,  0.13,  0.14,  0.15
+   1 , k_3_0.25_7_cassandra_entropic_times ,      13  ,     1 (-*             |              ), 0.10,  0.12,  0.13,  0.14,  0.15
+   1 , k_3_0.25_9_cassandra_entropic_times ,      13  ,     1 (-*             |              ), 0.11,  0.13,  0.13,  0.14,  0.15
+   1 , k_3_0.25_11_cassandra_entropic_times ,      13  ,     1 (-*             |              ), 0.11,  0.13,  0.13,  0.14,  0.15
+   1 , k_3_0.2_13_cassandra_entropic_times ,      13  ,     3 (-*             |              ), 0.10,  0.11,  0.13,  0.14,  0.15
+   1 , k_3_0.01_5_accumulo_where_times ,      13  ,     4 ( *             |              ), 0.10,  0.10,  0.13,  0.14,  0.18
+   1 , k_3_0.15_7_camel_entropic_times ,      13  ,     3 (-*             |              ), 0.10,  0.13,  0.13,  0.14,  0.16
+   1 , k_3_0_9_camel_where_times.txt ,      13  ,     4 (-*             |              ), 0.11,  0.12,  0.13,  0.15,  0.17
+   1 , k_3_0_5_camel_where_times.txt ,      13  ,     2 (-*             |              ), 0.11,  0.13,  0.13,  0.15,  0.17
+   1 , k_3_0.01_13_camel_where_times ,      13  ,     4 ( *             |              ), 0.12,  0.13,  0.13,  0.16,  0.19
+   1 , k_3_0.05_5_camel_where_times ,      13  ,     1 ( *             |              ), 0.12,  0.13,  0.13,  0.14,  0.16
+   1 , k_3_0.15_9_camel_entropic_times ,      13  ,     3 ( *             |              ), 0.10,  0.11,  0.13,  0.14,  0.16
+   1 , k_3_0.01_9_camel_where_times ,      13  ,     2 (-*             |              ), 0.11,  0.13,  0.13,  0.15,  0.16
+   1 , k_3_0.05_7_camel_where_times ,      13  ,     4 (-*             |              ), 0.11,  0.12,  0.13,  0.14,  0.18
+   1 , k_3_0.05_11_camel_where_times ,      13  ,     3 (-*             |              ), 0.11,  0.13,  0.13,  0.15,  0.19
+   1 , k_3_0.2_7_camel_entropic_times ,      13  ,     3 ( *             |              ), 0.12,  0.13,  0.13,  0.15,  0.18
+   1 , k_3_0.01_5_camel_where_times ,      13  ,     2 ( *             |              ), 0.12,  0.13,  0.13,  0.14,  0.16
+   1 , k_3_0_7_camel_where_times.txt ,      14  ,     3 (-*             |              ), 0.11,  0.13,  0.14,  0.16,  0.21
+   1 , k_3_0.05_9_camel_where_times ,      14  ,     3 (-*             |              ), 0.11,  0.12,  0.14,  0.15,  0.21
+   1 , k_3_0.01_7_camel_where_times ,      14  ,     3 ( *             |              ), 0.12,  0.13,  0.14,  0.15,  0.16
+   1 , k_3_0.05_13_camel_where_times ,      14  ,     2 ( *             |              ), 0.11,  0.13,  0.14,  0.15,  0.18
+   1 , k_3_0.2_5_camel_entropic_times ,      14  ,     3 (-*             |              ), 0.11,  0.13,  0.14,  0.16,  0.17
+   1 , k_3_0.25_13_cassandra_entropic_times ,      14  ,     1 (-*             |              ), 0.11,  0.13,  0.14,  0.14,  0.15
+   1 , k_3_0.15_11_camel_entropic_times ,      14  ,     2 ( *             |              ), 0.12,  0.13,  0.14,  0.15,  0.16
+   1 , k_3_0.25_9_camel_pca_times ,      14  ,     2 (-*             |              ), 0.09,  0.13,  0.14,  0.14,  0.16
+   1 , k_3_0.2_13_camel_entropic_times ,      14  ,     3 ( *             |              ), 0.12,  0.13,  0.14,  0.16,  0.18
+   1 , k_3_0.25_7_camel_pca_times ,      14  ,     3 (-*             |              ), 0.11,  0.12,  0.14,  0.15,  0.16
+   1 , k_3_0.25_11_camel_pca_times ,      14  ,     2 (-*             |              ), 0.11,  0.13,  0.14,  0.15,  0.16
+   1 , k_3_0.25_13_camel_pca_times ,      14  ,     4 (-*             |              ), 0.10,  0.13,  0.14,  0.16,  0.18
+   1 , k_3_0.2_9_camel_entropic_times ,      15  ,     2 ( *             |              ), 0.12,  0.14,  0.15,  0.15,  0.17
+   1 , k_3_0.25_9_accumulo_entropic_times ,      16  ,     2 ( *             |              ), 0.14,  0.14,  0.16,  0.16,  0.16
+   1 , k_3_0.25_11_accumulo_entropic_times ,      16  ,     2 ( *             |              ), 0.14,  0.14,  0.16,  0.16,  0.17
+   1 , k_3_0.25_7_accumulo_entropic_times ,      16  ,     2 ( *             |              ), 0.14,  0.14,  0.16,  0.16,  0.17
+   1 , k_3_0.2_11_camel_entropic_times ,      16  ,     3 (-*             |              ), 0.11,  0.14,  0.16,  0.16,  0.19
+   1 , k_3_0.25_5_camel_entropic_times ,      16  ,     4 ( *             |              ), 0.13,  0.15,  0.16,  0.17,  0.21
+   1 , k_3_0.25_13_accumulo_entropic_times ,      16  ,     2 ( *             |              ), 0.14,  0.14,  0.16,  0.16,  0.17
+   2 , k_3_0.15_5_accumulo_where_times ,      19  ,     1 ( *             |              ), 0.19,  0.19,  0.19,  0.20,  0.23
+   2 , k_3_0.15_7_accumulo_where_times ,      19  ,     2 ( *             |              ), 0.19,  0.19,  0.19,  0.21,  0.23
+   2 , k_3_0.15_9_accumulo_where_times ,      19  ,     1 ( *             |              ), 0.19,  0.19,  0.19,  0.20,  0.21
+   2 , k_3_0.15_11_accumulo_where_times ,      20  ,     1 ( *             |              ), 0.19,  0.19,  0.20,  0.20,  0.21
+   2 , k_3_0.15_13_accumulo_where_times ,      20  ,     1 ( *             |              ), 0.19,  0.19,  0.20,  0.20,  0.26
+   2 , k_3_0.2_11_accumulo_where_times ,      20  ,     3 ( *             |              ), 0.19,  0.19,  0.20,  0.21,  0.23
+   2 , k_3_0.2_5_accumulo_where_times ,      20  ,     0 ( *             |              ), 0.19,  0.20,  0.20,  0.20,  0.27
+   2 , k_3_0.2_13_accumulo_where_times ,      20  ,     0 ( *             |              ), 0.20,  0.20,  0.20,  0.20,  0.22
+   2 , k_3_0.25_5_accumulo_where_times ,      20  ,     0 ( *             |              ), 0.20,  0.20,  0.20,  0.20,  0.26
+   2 , k_3_0.2_9_accumulo_where_times ,      20  ,     4 ( *             |              ), 0.19,  0.19,  0.20,  0.22,  0.27
+   2 , k_3_0.2_11_cassandra_where_times ,      21  ,     4 ( *             |              ), 0.19,  0.20,  0.21,  0.23,  0.27
+   2 , k_3_0.25_13_cassandra_where_times ,      21  ,     4 ( *             |              ), 0.19,  0.20,  0.21,  0.23,  0.26
+   2 , k_3_0.2_7_accumulo_where_times ,      21  ,     4 ( *             |              ), 0.19,  0.19,  0.21,  0.23,  0.27
+   2 , k_3_0.15_5_cassandra_where_times ,      21  ,     4 ( *             |              ), 0.19,  0.20,  0.21,  0.23,  0.28
+   2 , k_3_0.2_9_cassandra_where_times ,      21  ,     3 ( *             |              ), 0.20,  0.20,  0.21,  0.23,  0.27
+   2 , k_3_0.25_9_cassandra_where_times ,      22  ,     4 ( *             |              ), 0.19,  0.20,  0.22,  0.24,  0.27
+   2 , k_3_0.25_9_camel_entropic_times ,      22  ,     5 ( *             |              ), 0.19,  0.19,  0.22,  0.24,  0.26
+   2 , k_3_0.25_13_bookkeeper_2-means_times ,      22  ,     2 ( *             |              ), 0.19,  0.21,  0.22,  0.23,  0.24
+   2 , k_3_0.25_11_bookkeeper_2-means_times ,      22  ,     4 ( *             |              ), 0.19,  0.21,  0.22,  0.24,  0.27
+   2 , k_3_0.25_9_bookkeeper_2-means_times ,      22  ,     1 ( *             |              ), 0.19,  0.21,  0.22,  0.22,  0.23
+   2 , k_3_0.15_9_cassandra_where_times ,      22  ,     4 ( *             |              ), 0.19,  0.21,  0.22,  0.24,  0.25
+   2 , k_3_0.2_7_cassandra_where_times ,      22  ,     5 ( *             |              ), 0.20,  0.21,  0.22,  0.24,  0.27
+   2 , k_3_0.25_7_cassandra_where_times ,      22  ,     3 ( *             |              ), 0.19,  0.21,  0.22,  0.23,  0.26
+   2 , k_3_0.25_11_cassandra_where_times ,      22  ,     4 ( *             |              ), 0.19,  0.21,  0.22,  0.24,  0.27
+   2 , k_3_0.2_13_cassandra_where_times ,      22  ,     2 ( *             |              ), 0.20,  0.21,  0.22,  0.23,  0.26
+   2 , k_3_0.2_11_bookkeeper_2-means_times ,      22  ,     1 (  *            |              ), 0.21,  0.22,  0.22,  0.23,  0.26
+   2 , k_3_0.2_5_cassandra_where_times ,      22  ,     4 (  *            |              ), 0.19,  0.21,  0.22,  0.24,  0.27
+   2 , k_3_0.15_11_bookkeeper_2-means_times ,      22  ,     2 ( -*            |              ), 0.21,  0.22,  0.22,  0.24,  0.26
+   2 , k_3_0.25_13_camel_entropic_times ,      22  ,     3 (  *            |              ), 0.19,  0.21,  0.22,  0.23,  0.27
+   2 , k_3_0.1_5_bookkeeper_2-means_times ,      22  ,     2 (  *            |              ), 0.21,  0.22,  0.22,  0.24,  0.24
+   2 , k_3_0.15_11_cassandra_where_times ,      23  ,     5 (  *            |              ), 0.20,  0.22,  0.23,  0.25,  0.28
+   2 , k_3_0.25_11_camel_entropic_times ,      23  ,     4 (  *            |              ), 0.19,  0.21,  0.23,  0.24,  0.27
+   2 , k_3_0.1_11_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.23,  0.24
+   2 , k_3_0.25_5_cassandra_where_times ,      23  ,     3 (  *            |              ), 0.19,  0.21,  0.23,  0.24,  0.27
+   2 , k_3_0.1_7_bookkeeper_2-means_times ,      23  ,     1 (  *            |              ), 0.22,  0.22,  0.23,  0.23,  0.25
+   2 , k_3_0.2_5_bookkeeper_2-means_times ,      23  ,     2 (  *            |              ), 0.22,  0.22,  0.23,  0.24,  0.27
+   2 , k_3_0.1_13_bookkeeper_2-means_times ,      23  ,     1 ( -*            |              ), 0.21,  0.22,  0.23,  0.23,  0.26
+   2 , k_3_0.05_7_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.24,  0.26
+   2 , k_3_0.05_9_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.23,  0.25
+   2 , k_3_0.25_7_camel_entropic_times ,      23  ,     2 (  *            |              ), 0.19,  0.22,  0.23,  0.24,  0.26
+   2 , k_3_0.05_5_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.24,  0.24
+   2 , k_3_0.15_7_cassandra_where_times ,      23  ,     5 (  *            |              ), 0.20,  0.22,  0.23,  0.25,  0.29
+   2 , k_3_0.15_9_bookkeeper_2-means_times ,      23  ,     3 (  *            |              ), 0.21,  0.22,  0.23,  0.23,  0.26
+   2 , k_3_0.25_5_bookkeeper_2-means_times ,      23  ,     3 (  *            |              ), 0.20,  0.21,  0.23,  0.24,  0.27
+   2 , k_3_0.05_13_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.24,  0.26
+   2 , k_3_0.05_11_bookkeeper_2-means_times ,      23  ,     2 ( -*            |              ), 0.21,  0.22,  0.23,  0.24,  0.26
+   2 , k_3_0.25_7_bookkeeper_2-means_times ,      23  ,     4 (  *            |              ), 0.20,  0.22,  0.23,  0.24,  0.27
+   2 , k_3_0.2_13_bookkeeper_2-means_times ,      23  ,     4 ( -*            |              ), 0.21,  0.22,  0.23,  0.25,  0.30
+   2 , k_3_0.15_5_bookkeeper_2-means_times ,      23  ,     3 ( -*            |              ), 0.19,  0.22,  0.23,  0.24,  0.26
+   2 , k_3_0.15_13_bookkeeper_2-means_times ,      24  ,     3 ( -*            |              ), 0.21,  0.23,  0.24,  0.24,  0.27
+   2 , k_3_0.2_9_bookkeeper_2-means_times ,      24  ,     5 ( -*            |              ), 0.22,  0.23,  0.24,  0.27,  0.30
+   2 , k_3_0.15_7_bookkeeper_2-means_times ,      24  ,     3 ( -*            |              ), 0.20,  0.22,  0.24,  0.25,  0.26
+   2 , k_3_0.15_13_cassandra_where_times ,      24  ,     4 (  *            |              ), 0.19,  0.21,  0.24,  0.25,  0.28
+   2 , k_3_0.1_9_bookkeeper_2-means_times ,      24  ,     2 ( -*            |              ), 0.21,  0.22,  0.24,  0.24,  0.26
+   2 , k_3_0.2_7_bookkeeper_2-means_times ,      24  ,     2 ( -*            |              ), 0.21,  0.22,  0.24,  0.24,  0.27
+   3 , k_3_0.1_5_camel_where_times ,      26  ,     3 (  *            |              ), 0.22,  0.24,  0.26,  0.27,  0.32
+   3 , k_3_0.1_13_camel_where_times ,      26  ,     5 (  *            |              ), 0.22,  0.26,  0.26,  0.30,  0.33
+   3 , k_3_0.1_9_camel_where_times ,      26  ,     6 (  *            |              ), 0.22,  0.25,  0.26,  0.30,  0.35
+   3 , k_3_0.1_11_camel_where_times ,      26  ,     5 (  *            |              ), 0.22,  0.23,  0.26,  0.29,  0.30
+   3 , k_3_0.15_5_camel_where_times ,      27  ,     5 (  *            |              ), 0.23,  0.26,  0.27,  0.29,  0.32
+   3 , k_3_0.15_9_camel_where_times ,      27  ,     3 (  *            |              ), 0.24,  0.26,  0.27,  0.27,  0.32
+   3 , k_3_0.1_7_camel_where_times ,      27  ,     4 (  *            |              ), 0.22,  0.26,  0.27,  0.28,  0.33
+   3 , k_3_0.2_7_camel_where_times ,      27  ,     2 (  *            |              ), 0.24,  0.26,  0.27,  0.28,  0.32
+   3 , k_3_0.15_13_camel_where_times ,      27  ,     4 (  *            |              ), 0.24,  0.25,  0.27,  0.29,  0.33
+   3 , k_3_0.25_5_camel_where_times ,      27  ,     2 (  *            |              ), 0.24,  0.26,  0.27,  0.28,  0.30
+   3 , k_3_0.15_11_camel_where_times ,      27  ,     2 (  *            |              ), 0.24,  0.26,  0.27,  0.29,  0.33
+   3 , k_3_0.2_9_camel_where_times ,      27  ,     5 (  *            |              ), 0.24,  0.26,  0.27,  0.30,  0.32
+   3 , k_3_0.2_13_camel_where_times ,      28  ,     4 (  *            |              ), 0.25,  0.26,  0.28,  0.29,  0.32
+   3 , k_3_0.2_5_camel_where_times ,      28  ,     3 (  *            |              ), 0.25,  0.27,  0.28,  0.30,  0.33
+   3 , k_3_0.2_11_camel_where_times ,      28  ,     4 (  *            |              ), 0.26,  0.26,  0.29,  0.29,  0.32
+   3 , k_3_0.15_7_camel_where_times ,      28  ,     5 (  *            |              ), 0.23,  0.26,  0.29,  0.30,  0.32
+   4 , k_3_0.25_11_accumulo_where_times ,      39  ,     0 (   *           |              ), 0.38,  0.39,  0.39,  0.39,  0.45
+   4 , k_3_0.25_9_accumulo_where_times ,      39  ,     1 (   *           |              ), 0.39,  0.39,  0.39,  0.39,  0.44
+   4 , k_3_0.25_7_accumulo_where_times ,      39  ,     3 (   *           |              ), 0.39,  0.39,  0.39,  0.41,  0.46
+   5 , k_3_0.01_7_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0_7_accumulo_2-means_times.txt ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0_5_accumulo_2-means_times.txt ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.42
+   5 , k_3_0.01_5_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.01_9_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.42
+   5 , k_3_0.01_11_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.42
+   5 , k_3_0.01_13_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0_11_accumulo_2-means_times.txt ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0_9_accumulo_2-means_times.txt ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0_13_accumulo_2-means_times.txt ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.43,  0.44
+   5 , k_3_0.1_13_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.05_9_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.1_5_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.05_13_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.05_11_accumulo_2-means_times ,      42  ,     0 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.1_7_accumulo_2-means_times ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.05_7_accumulo_2-means_times ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.43,  0.43
+   5 , k_3_0.1_9_accumulo_2-means_times ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.42,  0.43
+   5 , k_3_0.1_11_accumulo_2-means_times ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.43,  0.43
+   5 , k_3_0.05_5_accumulo_2-means_times ,      42  ,     1 (   *           |              ), 0.42,  0.42,  0.42,  0.43,  0.43
+   5 , k_3_0.25_13_accumulo_where_times ,      44  ,     7 (   *           |              ), 0.39,  0.40,  0.44,  0.45,  0.47
+   6 , k_3_0.05_13_camel_2-means_times ,      47  ,     4 (   -*          |              ), 0.44,  0.46,  0.47,  0.50,  0.52
+   6 , k_3_0.01_7_camel_2-means_times ,      47  ,     5 (   -*          |              ), 0.44,  0.46,  0.47,  0.51,  0.56
+   6 , k_3_0_11_camel_2-means_times.txt ,      47  ,     4 (    *          |              ), 0.45,  0.46,  0.47,  0.49,  0.53
+   6 , k_3_0.01_5_camel_2-means_times ,      47  ,     5 (   -*          |              ), 0.44,  0.46,  0.47,  0.49,  0.53
+   6 , k_3_0.01_11_cassandra_2-means_times ,      47  ,     3 (   -*          |              ), 0.44,  0.46,  0.47,  0.49,  0.51
+   6 , k_3_0_7_camel_2-means_times.txt ,      47  ,     3 (   -*          |              ), 0.44,  0.47,  0.47,  0.48,  0.52
+   6 , k_3_0.05_5_camel_2-means_times ,      47  ,     3 (    *          |              ), 0.46,  0.47,  0.47,  0.49,  0.51
+   6 , k_3_0.01_13_camel_2-means_times ,      48  ,     2 (    *          |              ), 0.46,  0.47,  0.48,  0.48,  0.51
+   6 , k_3_0.01_7_cassandra_2-means_times ,      48  ,     4 (   -*          |              ), 0.45,  0.46,  0.48,  0.49,  0.53
+   6 , k_3_0_13_camel_2-means_times.txt ,      48  ,     4 (    *          |              ), 0.46,  0.47,  0.48,  0.51,  0.53
+   6 , k_3_0.05_7_camel_2-means_times ,      48  ,     3 (   -*          |              ), 0.44,  0.46,  0.48,  0.49,  0.51
+   6 , k_3_0_7_cassandra_2-means_times.txt ,      48  ,     5 (    *          |              ), 0.46,  0.47,  0.48,  0.51,  0.53
+   6 , k_3_0.01_11_camel_2-means_times ,      48  ,     4 (    *          |              ), 0.46,  0.47,  0.48,  0.50,  0.54
+   6 , k_3_0.05_9_camel_2-means_times ,      48  ,     4 (    *          |              ), 0.45,  0.47,  0.48,  0.50,  0.54
+   6 , k_3_0.01_9_camel_2-means_times ,      48  ,     4 (    *          |              ), 0.45,  0.46,  0.48,  0.50,  0.53
+   6 , k_3_0.01_5_cassandra_2-means_times ,      48  ,     4 (    *          |              ), 0.45,  0.47,  0.48,  0.51,  0.53
+   6 , k_3_0.05_5_cassandra_2-means_times ,      48  ,     3 (    *          |              ), 0.46,  0.48,  0.48,  0.50,  0.52
+   6 , k_3_0_11_cassandra_2-means_times.txt ,      49  ,     5 (    *          |              ), 0.45,  0.47,  0.49,  0.50,  0.55
+   6 , k_3_0_5_camel_2-means_times.txt ,      49  ,     4 (   -*          |              ), 0.44,  0.47,  0.49,  0.50,  0.56
+   6 , k_3_0.01_9_cassandra_2-means_times ,      49  ,     4 (    *          |              ), 0.45,  0.47,  0.49,  0.50,  0.53
+   6 , k_3_0.05_11_camel_2-means_times ,      49  ,     6 (   -*          |              ), 0.43,  0.46,  0.49,  0.50,  0.54
+   6 , k_3_0_9_camel_2-means_times.txt ,      49  ,     5 (   -*          |              ), 0.44,  0.47,  0.49,  0.51,  0.54
+   6 , k_3_0_13_cassandra_2-means_times.txt ,      49  ,     4 (    *          |              ), 0.47,  0.48,  0.49,  0.50,  0.54
+   6 , k_3_0_5_cassandra_2-means_times.txt ,      49  ,     5 (   -*          |              ), 0.44,  0.47,  0.49,  0.51,  0.53
+   6 , k_3_0.05_11_cassandra_2-means_times ,      49  ,     3 (    *          |              ), 0.47,  0.49,  0.49,  0.51,  0.56
+   6 , k_3_0.05_9_cassandra_2-means_times ,      49  ,     4 (   -*          |              ), 0.44,  0.47,  0.49,  0.51,  0.56
+   6 , k_3_0.05_7_cassandra_2-means_times ,      50  ,     4 (   -*          |              ), 0.44,  0.47,  0.50,  0.51,  0.55
+   6 , k_3_0.01_13_cassandra_2-means_times ,      50  ,     6 (   -*          |              ), 0.44,  0.48,  0.50,  0.54,  0.59
+   6 , k_3_0_9_cassandra_2-means_times.txt ,      51  ,     5 (    *          |              ), 0.47,  0.48,  0.51,  0.53,  0.58
+   6 , k_3_0.25_13_camel_where_times ,      51  ,     6 (    *          |              ), 0.46,  0.49,  0.51,  0.54,  0.57
+   7 , k_3_0.25_7_camel_where_times ,      53  ,     5 (    *          |              ), 0.48,  0.51,  0.53,  0.54,  0.61
+   7 , k_3_0.1_13_cassandra_2-means_times ,      53  ,     3 (    *          |              ), 0.50,  0.52,  0.53,  0.54,  0.56
+   7 , k_3_0.1_7_cassandra_2-means_times ,      53  ,     4 (    *          |              ), 0.51,  0.52,  0.53,  0.55,  0.58
+   7 , k_3_0.1_9_cassandra_2-means_times ,      53  ,     2 (    *          |              ), 0.51,  0.52,  0.53,  0.54,  0.60
+   7 , k_3_0.25_9_camel_where_times ,      53  ,     4 (    *          |              ), 0.49,  0.52,  0.53,  0.55,  0.58
+   7 , k_3_0.1_11_cassandra_2-means_times ,      53  ,     3 (    *          |              ), 0.51,  0.51,  0.53,  0.54,  0.55
+   7 , k_3_0.05_13_cassandra_2-means_times ,      54  ,     3 (    *          |              ), 0.51,  0.53,  0.54,  0.56,  0.56
+   7 , k_3_0.1_5_cassandra_2-means_times ,      54  ,     4 (    *          |              ), 0.50,  0.52,  0.54,  0.57,  0.62
+   7 , k_3_0.25_11_camel_where_times ,      54  ,     4 (    *          |              ), 0.51,  0.52,  0.54,  0.56,  0.58
+   8 , k_3_0.15_5_accumulo_2-means_times ,      87  ,     1 (       *       |              ), 0.86,  0.86,  0.87,  0.87,  0.87
+   8 , k_3_0.15_7_accumulo_2-means_times ,      87  ,     1 (       *       |              ), 0.87,  0.87,  0.87,  0.88,  0.91
+   9 , k_3_0.2_5_accumulo_2-means_times ,      89  ,     5 (       *       |              ), 0.88,  0.88,  0.89,  0.93,  0.99
+   9 , k_3_0.15_13_accumulo_2-means_times ,      89  ,     6 (       *       |              ), 0.88,  0.88,  0.89,  0.91,  0.97
+   9 , k_3_0.15_11_accumulo_2-means_times ,      89  ,     9 (       *-      |              ), 0.88,  0.88,  0.89,  0.97,  1.02
+   9 , k_3_0.25_5_accumulo_2-means_times ,      91  ,     6 (       -*      |              ), 0.90,  0.90,  0.91,  0.94,  0.99
+  10 , k_3_0.1_9_camel_2-means_times ,      94  ,     7 (       -*      |              ), 0.88,  0.91,  0.94,  0.97,  1.00
+  10 , k_3_0.15_7_camel_2-means_times ,      94  ,    10 (       -*      |              ), 0.88,  0.92,  0.94,  0.97,  1.05
+  10 , k_3_0.1_5_camel_2-means_times ,      94  ,    13 (       -*      |              ), 0.88,  0.90,  0.94,  0.99,  1.07
+  10 , k_3_0.1_13_camel_2-means_times ,      94  ,     9 (       -*      |              ), 0.87,  0.90,  0.94,  0.98,  1.02
+  10 , k_3_0.2_13_accumulo_2-means_times ,      95  ,     9 (       -*      |              ), 0.90,  0.92,  0.95,  1.00,  1.08
+  10 , k_3_0.15_5_camel_2-means_times ,      95  ,    10 (        *      |              ), 0.87,  0.89,  0.95,  0.97,  1.02
+  10 , k_3_0.15_13_camel_2-means_times ,      96  ,    13 (        *      |              ), 0.87,  0.89,  0.96,  1.02,  1.07
+  10 , k_3_0.15_9_camel_2-means_times ,      96  ,     9 (       -*      |              ), 0.87,  0.92,  0.96,  1.00,  1.03
+  10 , k_3_0.15_11_camel_2-means_times ,      96  ,    10 (       -*      |              ), 0.87,  0.91,  0.96,  1.00,  1.07
+  10 , k_3_0.2_9_camel_2-means_times ,      97  ,    10 (       -*      |              ), 0.87,  0.91,  0.97,  1.00,  1.05
+  10 , k_3_0.2_5_camel_2-means_times ,      97  ,    14 (       -*      |              ), 0.87,  0.91,  0.97,  1.02,  1.05
+  10 , k_3_0.2_13_camel_2-means_times ,      97  ,    10 (       -*      |              ), 0.89,  0.92,  0.97,  1.00,  1.05
+  10 , k_3_0.2_11_camel_2-means_times ,      97  ,     9 (       -*      |              ), 0.89,  0.92,  0.97,  1.00,  1.03
+  10 , k_3_0.1_7_camel_2-means_times ,      97  ,    10 (       -*      |              ), 0.88,  0.95,  0.97,  1.00,  1.08
+  10 , k_3_0.2_7_accumulo_2-means_times ,      97  ,    13 (        *----- |              ), 0.90,  0.95,  0.97,  1.04,  1.59
+  10 , k_3_0.25_5_camel_2-means_times ,      99  ,    12 (        *      |              ), 0.86,  0.89,  0.99,  1.00,  1.03
+  10 , k_3_0.2_7_camel_2-means_times ,      99  ,     8 (       -*      |              ), 0.87,  0.92,  0.99,  1.00,  1.03
+  10 , k_3_0.1_11_camel_2-means_times ,     100  ,    18 (       -*      |              ), 0.88,  0.90,  1.00,  1.02,  1.08
+  11 , k_3_0.2_9_cassandra_2-means_times ,     101  ,     7 (         *     |              ), 0.96,  1.00,  1.01,  1.04,  1.11
+  11 , k_3_0.2_11_cassandra_2-means_times ,     101  ,    13 (         *     |              ), 0.90,  0.96,  1.01,  1.07,  1.16
+  11 , k_3_0.2_7_cassandra_2-means_times ,     102  ,     5 (         *     |              ), 0.96,  1.00,  1.02,  1.05,  1.14
+  11 , k_3_0.25_9_cassandra_2-means_times ,     102  ,     8 (         *     |              ), 0.94,  0.99,  1.02,  1.05,  1.10
+  11 , k_3_0.2_9_accumulo_2-means_times ,     102  ,    18 (         *--   |              ), 0.91,  0.96,  1.02,  1.10,  1.45
+  11 , k_3_0.25_7_cassandra_2-means_times ,     103  ,     7 (         *     |              ), 0.99,  1.01,  1.03,  1.07,  1.13
+  11 , k_3_0.25_5_cassandra_2-means_times ,     104  ,     4 (        -*-    |              ), 0.98,  1.02,  1.04,  1.06,  1.28
+  12 , k_3_0.15_7_cassandra_2-means_times ,     105  ,     4 (         *     |              ), 1.03,  1.04,  1.05,  1.07,  1.13
+  12 , k_3_0.25_11_cassandra_2-means_times ,     105  ,     5 (        -*     |              ), 0.97,  1.02,  1.05,  1.07,  1.17
+  12 , k_3_0.2_5_cassandra_2-means_times ,     105  ,     9 (        -*     |              ), 0.99,  1.02,  1.05,  1.09,  1.22
+  12 , k_3_0.15_11_cassandra_2-means_times ,     106  ,     4 (         *     |              ), 1.03,  1.05,  1.06,  1.08,  1.10
+  12 , k_3_0.15_5_cassandra_2-means_times ,     106  ,     4 (         *     |              ), 1.03,  1.05,  1.06,  1.08,  1.11
+  12 , k_3_0.15_9_cassandra_2-means_times ,     106  ,     4 (        -*     |              ), 1.01,  1.04,  1.06,  1.07,  1.10
+  12 , k_3_0.15_13_cassandra_2-means_times ,     107  ,     3 (         *     |              ), 1.02,  1.05,  1.07,  1.07,  1.10
+  12 , k_3_0.15_9_accumulo_2-means_times ,     107  ,    46 (         * ----|-             ), 0.91,  0.98,  1.07,  1.25,  1.95
+  12 , k_3_0.2_13_cassandra_2-means_times ,     107  ,    10 (        -*     |              ), 0.96,  1.03,  1.07,  1.12,  1.21
+  12 , k_3_0.25_13_cassandra_2-means_times ,     108  ,    11 (        -*-    |              ), 0.97,  1.04,  1.08,  1.13,  1.27
+  12 , k_3_0.2_11_accumulo_2-means_times ,     111  ,    12 (        -*-    |              ), 0.98,  1.03,  1.11,  1.16,  1.26
+  13 , k_3_0.25_11_camel_2-means_times ,     182  ,    13 (               |*             ), 1.77,  1.79,  1.82,  1.89,  1.97
+  13 , k_3_0.25_13_camel_2-means_times ,     183  ,    10 (               |*             ), 1.77,  1.80,  1.83,  1.87,  1.93
+  13 , k_3_0.25_7_camel_2-means_times ,     186  ,    13 (               |*             ), 1.77,  1.78,  1.86,  1.89,  1.95
+  14 , k_3_0.25_7_accumulo_2-means_times ,     187  ,     8 (               |*             ), 1.80,  1.81,  1.87,  1.89,  2.01
+  14 , k_3_0.25_9_camel_2-means_times ,     187  ,    14 (               |*             ), 1.77,  1.80,  1.87,  1.91,  1.94
+  14 , k_3_0.25_9_accumulo_2-means_times ,     188  ,    14 (               |*--           ), 1.80,  1.84,  1.88,  1.94,  2.15
+  14 , k_3_0.25_11_accumulo_2-means_times ,     188  ,     9 (               |*-            ), 1.82,  1.85,  1.88,  1.93,  2.05
+  15 , k_3_0.25_13_accumulo_2-means_times ,     193  ,    26 (               | *------      ), 1.79,  1.86,  1.93,  2.06,  2.79
