@@ -7,6 +7,7 @@ Spatial tree demo for matrix data
 import numpy, random, sys, pprint, timeit
 from spatialtree import spatialtree
 from fileio import summarize, csv_reader, make_stats
+from numpy.linalg.linalg import LinAlgError
 
 
 results_memo = {}
@@ -22,8 +23,8 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
     tree= tree_type or 'kd'
     spill = spill_rate or .25
     samples = samp or 100
-    k_near = k_neighbors or 10
-    k = 5
+    k_near = k_neighbors or 1
+    #k = 5
     max_value = 100
     filename = files
     
@@ -33,9 +34,10 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
     
         
     # read in the data
-    X = csv_reader(filename)
+    X = list(csv_reader(filename))
     N = len(X)
     D = len(X[0])
+
     # divide the data into 5 groups for cross validation
     i = 0
     random.shuffle(X)
@@ -49,7 +51,7 @@ def matrixDemoTestWorker(size = None, dimensions = None, tree_type = None, spill
         print(len(Y[i]))
     """
     timer = open(tree, 'w')
-
+    
     # for each, use the other 4 groups for training, test on the remaining group
     for item in Y:
         t = []
@@ -95,19 +97,24 @@ def matrixTestMaster(samples, trials, size = None, dimensions = None, tree_type 
     #spill_rates = [0, 0.01, 0.05, 0.10, 0.15, 0.2, 0.25]
     #tree_depth = [5, 6, 7, 8, 9, 10, 11, 12, 13]
     #files = ['cassandra.csv', 'diabetes.csv', 'mccabes_mc12.csv', 'testdata.csv']
-    tree_depths = [5, 7, 9, 11, 13]
+    tree_depths = [None]
     trees = ['kd', 'pca', '2-means', 'rp', 'where', 'random', 'spectral']
-    spill_rates = [0, 0.01, 0.05, 0.1]
-    files = ['diabetes.csv']
+    spill_rates = [0]
+    files = ['mccabes_mc12.csv']
     #myArray=[[[[0 for a in range(2)] for k in range(len(tree_depths))] for j in range(len(spill_rates))] for i in range(len(trees))]
     
+    n = 0
+    d = 0
     
     for b in files:
         for x in xrange(len(trees)):
             for y in xrange(len(spill_rates)):
                 for z in xrange(len(tree_depths)):
                     for a in xrange(trials):
-                        n, d = matrixDemoTestWorker(tree_type = trees[x], spill_rate = spill_rates[y], tree_depth = tree_depths[z], files=b)
+                        try:
+                            n, d = matrixDemoTestWorker(tree_type = trees[x], spill_rate = spill_rates[y], tree_depth = tree_depths[z], files=b)
+                        except LinAlgError:
+                            break
 
     # call the fileio summarize method to give quartiles of data collected
     #for t in trees:

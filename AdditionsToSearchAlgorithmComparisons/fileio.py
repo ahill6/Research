@@ -1,6 +1,7 @@
 from math import floor
 from collections import defaultdict
 from tools import items
+from copy import deepcopy
 import sys, os, numpy, csv, classes
 
 # Helper methods
@@ -15,7 +16,7 @@ def find_median(lst):
 
 def del_txt():
     path = '.'
-    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('summary' not in f)]
+    files = [f for f in os.listdir(path) if f.endswith('.txt') & ("_" in f) & ('stats' not in f) & ('times' not in f)]
     for f in files:
         os.remove(f)
         
@@ -41,13 +42,61 @@ def csv_reader(filename):
         
     # record information about this particular dataset    
     f = open(filename.split(".")[0]+"_stats.txt", 'w')
+    f.write("lines\n"+str(len(data))+"\n")
+    f.write("decisions\n"+str(len(data[0]))+"\n")
+    meds = numpy.median(data, axis=0)
+    mins = numpy.amin(data, axis=0)
+    maxs = numpy.amax(data, axis=0)
+    stds = numpy.std(data, axis=0)
+    cov = numpy.corrcoef(data, rowvar=0)
+    useless1 = []
+    #useless2 = [ind for ind, mn, md, mx, sd in enumerate(zip(mins,meds, maxs, stds)) if (md-md < sd) if (mx-md < sd)]
+    for i in xrange(len(meds)-1):
+        if ((maxs[i] - mins[i]) < 1.96*stds[i]):
+            useless1.append(i)
+    #print(cov)
+    #print(useless2)
+    
+    data_normed = data / maxs
+
     f.write("medians\n"+str(numpy.median(data, axis=0))+"\n")
     f.write("variable minima\n"+str(numpy.amin(data, axis=0))+"\n")
     f.write("variable maxima\n"+str(numpy.amax(data, axis=0))+"\n")
     f.write("standard deviations\n"+str(numpy.std(data, axis=0))+"\n")
     #numpy.corrcoef(a, rowvar=0) # save this for if needed
-
-    return data
+    """
+    row_sums = data.sum(axis=1)
+    new_matrix = data / row_sums[:, numpy.newaxis]
+    row_sums[:, numpy.newaxis]
+    """
+    #data_normed = data / data.max(axis=0)
+    return data_normed
+    
+def csv_reader2(filename):
+    with open(filename) as temp_file:
+        data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
+    
+    meds = numpy.median(data, axis=0)
+    mins = numpy.amin(data, axis=0)
+    maxs = numpy.amax(data, axis=0)
+    stds = numpy.std(data, axis=0)
+    cov = numpy.corrcoef(data, rowvar=0)
+    useless = set()
+    #useless2 = [ind for ind, mn, md, mx, sd in enumerate(zip(mins,meds, maxs, stds)) if (md-md < sd) if (mx-md < sd)]
+    #print(useless2)
+    
+    # HERE RUN THROUGH COVARIANCE AND FIGURE OUT WHO NEEDS TO GO
+    limit = .95
+    for row in cov:
+        useless.update([i for i, val in enumerate(row) if (val > limit and val != 1.0)])
+    
+    #print(useless)
+        
+    reduced = [[item[i] for i in xrange(len(item)) if i not in useless] for item in data]
+    data_normed = data / data.max(axis=0)
+    reduced_normed = reduced / reduced.max(axis=0)
+    return data_normed, reduced_normed
+    #return data, reduced
     
 def pretty_print(f, d):
     for k in sorted(d.keys()):
@@ -169,15 +218,17 @@ def make_stats(num_entries=None, num_decisions=None):
             
             # find iqr
             recall = sorted(recall)
+            min = recall[0]
             _25 = find_median(find_median(recall)[1])[0]
             median = find_median(recall)[0]
             _75 = find_median(find_median(recall)[2])[0]
+            max = recall[-1]
             
             # print that data to a summary file   
             total = len(recall)
             stats.write(f.name+"\n")
             medians.write(f.name+"\n")
-            medians.write(str(_25) + "\t" + str(median) + "\t" + str(_75) + "\n")
+            medians.write(str(min)+'\t'+str(_25) + "\t" + str(median) + "\t" + str(_75) + "\t" + str(max) + "\n")
             #summary.write(" ".join(str(_25),str(median),str(_75)) + "\n")
             stats.write("rec " + str(mean_recall/total) + "\n")
             stats.write("pf " + str(mean_pf/total) + "\n")
@@ -226,6 +277,10 @@ def table_please(num_entries=None, num_decisions=None, infile=None):
     def stats(cin):
         x,y = cin.split()
         nested_set(results,[s,d,x,m], y)
+    def graphing(cin):
+        x,y,z = cin.split()
+        e = [y, eval(z) - eval(x)]
+        nested_set(results,[s,d,m], e)
     
     file = infile or 'summary.txt'
     if 'median' in infile:
@@ -287,10 +342,109 @@ def write_table_from_dict(dictionary, entries, decisions, outfile):
     #cout = open('table.ods','w')
     
     # print number of entries and decisions for reference/interest
-    cout.write("" + str(entries) + 'entries , ' + str(decisions) + "decisions\n")
+    cout.write("" + str(entries) + ' entries , ' + str(decisions) + " decisions\n")
     # print the whole dictionary in a particular order/way (using the keys as headers)
     printprocess()
-                    
+    #del_txt()
+
+def graph_data():
+    path = '.'      
+    files = [f for f in os.listdir(path) if f.endswith('.txt') if ("_" in f) if ('summary' not in f) if  ("stat" not in f)]
+    #timers = [f for f in os.listdir(path) if "." not in f]
+
+    if len(files) > 0:
+        chart = open("chart_data.txt",'w')
+        print "Prepping Data for Graphs..."
+        
+        """
+        for g in timers:
+            h = open(g, 'r')
+            times.write(g + "\n" + h.readline()+"\n")
+            h.close()
+        times.close()
+        """
+        
+        for f in sorted(files):
+            # open file
+            g = open(f, 'r')
+            #print f.name
+            
+            true_pos = []
+            false_pos = []
+            false_neg = []
+            true_neg = []
+            recall = []
+            pf = []
+            prec = []
+            acc = []
+            select = []
+            neg_pos = []
+            
+            # read in something
+            cin = f.readline()
+            cin = cin[:-2]
+            results = cin.strip("\n").split(',')
+            mean_recall = 0
+            mean_pf = 0
+            mean_prec = 0
+            mean_acc = 0
+            mean_select = 0
+            mean_neg_pos = 0
+
+            # calculate stats (quartiles, all others)
+            for item in results:
+                tp,fp,tn = item.split('-')
+                tp = float(tp)
+                fp = float(fp)
+                tn = float(tn)
+                fn = fp
+
+                true_pos.append(tp)
+                false_pos.append(fp)
+                false_neg.append(fp)    #this would normally be otherwise
+                true_neg.append(tn)
+                
+                recall.append((tp+0.0)/(fn + tp))
+                pf.append((fp+0.0)/(tn+fp))
+                prec.append((tp+0.0)/(tp+fp))
+                acc.append((tn+tp+0.0)/(tn+fn+fp+tp))
+                select.append((fp+tp+0.0)/(tn+fn+fp+tp))
+                neg_pos.append((tn+fp+0.0)/(fn+tp))
+                
+                
+                mean_recall += (tp+0.0)/(fn + tp)
+                mean_pf += (fp+0.0)/(tn+fp)
+                mean_prec += (tp+0.0)/(tp+fp)
+                mean_acc += (tn+tp+0.0)/(tn+fn+fp+tp)
+                mean_select += (fp+tp+0.0)/(tn+fn+fp+tp)
+                mean_neg_pos += (tn+fp+0.0)/(fn+tp)
+            
+            # find iqr
+            recall = sorted(recall)
+            min = recall[0]
+            _25 = find_median(find_median(recall)[1])[0]
+            median = find_median(recall)[0]
+            _75 = find_median(find_median(recall)[2])[0]
+            max = recall[-1]
+            
+            # print that data to a summary file   
+            total = len(recall)
+            chart.write(f.name+"\n")
+            chart.write(str(min)+'\t'+str(_25) + "\t" + str(median) + "\t" + str(_75) + "\t" + str(max) + "\n")
+            #summary.write(" ".join(str(_25),str(median),str(_75)) + "\n")
+            chart.write("rec " + str(mean_recall/total) + "\n")
+            chart.write("pf " + str(mean_pf/total) + "\n")
+            chart.write("prec " + str(mean_prec/total) + "\n")
+            chart.write("acc " + str(mean_acc/total) + "\n")
+            chart.write("select " + str(mean_select/total) + "\n")
+            chart.write("neg/pos " + str(mean_neg_pos/total) + "\n")
+            
+            # close data file and repeat
+            f.close()
+        #pretty_print(summary, txt)    
+        chart.close()
+        print "Done"    
+        
 def make_me_a_table(num_entries, num_decisions, infile=None):
     rob = ResultFactory('name')
     
@@ -353,7 +507,9 @@ def write_table(data, num_entries, num_decisions):
                 out.write(pf[a][b][m] + ',') # how to reference?
     """    
             
-#strip_csv('cassandra.csv',0)            
+#strip_csv('arc.csv',-1)
 #make_stats()
-del_txt()
+#del_txt()
+#csv_reader("camel967.csv")
+#graph_data()
 #need to cut the first element off of mccabes_mc12 before using

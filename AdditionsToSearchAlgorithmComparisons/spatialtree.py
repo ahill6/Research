@@ -176,10 +176,10 @@ class spatialtree(object):
         for i in self.__indices:
             wx[i] = numpy.dot(self.__w, data[i])
             pass
-
+        
         # Compute the bias points
         self.__thresholds = scipy.stats.mstats.mquantiles(wx.values(), [0.5 - self.__spill/2, 0.5 + self.__spill/2])
-
+        
         # Partition the data
         left_set    = set()
         right_set   = set()
@@ -637,9 +637,7 @@ class spatialtree(object):
                     max = c
             return farthest
 
-            
-        x = random.randint(0,len(data)-1)
-        west = data[x]
+        west = random.choice(data)
         
         east = furthest(west, data)
         west = furthest(east, data)
@@ -668,13 +666,18 @@ class spatialtree(object):
         # Normalize software metrics .
         # find mean(x), sd(x)
         #zros = numpy.zeros(len(data))
-        mean = numpy.mean(data,axis=0)
+        #mean = numpy.mean(data,axis=0)
+        #col_sums = data.sum(axis=0)
+        #std = numpy.std(data,axis=0)
+        normA = scipy.stats.mstats.zscore(data)
+        col_sums = data.sum(axis=0)
+        normA = data / col_sums[numpy.newaxis, :]
         #print(zros)
         #print(mean)
         #print(data)
-        std = numpy.std(data,axis=0)
+        
         #data[True] = (data - mean) / std 
-        normA = data
+        #normA = data
         #normA = apply (A , 2 , function ( x ) {( x - mean ( x ) )/ sd(x ) })
         #normalize all columns by said values
         
