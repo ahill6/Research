@@ -1,0 +1,13 @@
+ERROR WITH 12-elearning2_cart.txt
+ERROR WITH 14-elearning2_cart.txt
+ERROR WITH 17-elearning2_cart.txt
+ERROR WITH 19-elearning2_cart.txt
+ERROR WITH 23-elearning2_cart.txt
+ERROR WITH 4-elearning2_cart.txt
+ERROR WITH 5-elearning2_cart.txt
+ERROR WITH 1-k_3_0.25_5_elearning2_kd.txt
+ERROR WITH 13-k_3_0.25_5_elearning2_kd.txt
+ERROR WITH 14-k_3_0.25_5_elearning2_kd.txt
+ERROR WITH 1-k_3_0.25_5_elearning2_kd_global.txt
+ERROR WITH 13-k_3_0.25_5_elearning2_kd_global.txt
+ERROR WITH 14-k_3_0.25_5_elearning2_kd_global.txt
