@@ -1,0 +1,46 @@
+rank ,         name ,    med   ,  iqr 
+----------------------------------------------------
+   1 , k_3_0.25_5_bookkeeper_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_openjpa_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_derby_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_cassandra_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_cxf_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_hive_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_wicket_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_felix_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_camel_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_pig_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_accumulo_cart_recall_times_transfer ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_bookkeeper_kdrecall_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_openjpa_kdrecall_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_pig_kdrecall_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.01
+   1 , k_3_0.25_5_accumulo_kdrecall_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_cassandra_kdrecall_times ,       0  ,     0 (*              |              ), 0.00,  0.00,  0.00,  0.00,  0.00
+   1 , k_3_0.25_5_wicket_kdrecall_times ,       1  ,     1 (*              |              ), 0.00,  0.00,  0.01,  0.01,  0.01
+   1 , k_3_0.25_5_derby_kdrecall_times ,       1  ,     1 (*              |              ), 0.00,  0.00,  0.01,  0.01,  0.01
+   1 , k_3_0.25_5_cxf_kdrecall_times ,       1  ,     1 (*              |              ), 0.00,  0.01,  0.01,  0.01,  0.01
+   1 , k_3_0.25_5_hive_kdrecall_times ,       1  ,     1 (*              |              ), 0.00,  0.01,  0.01,  0.01,  0.01
+   1 , k_3_0.25_5_felix_kdrecall_times ,       1  ,     0 (*              |              ), 0.00,  0.01,  0.01,  0.01,  0.01
+   1 , k_3_0.25_5_camel_kdrecall_times ,       1  ,     0 (*              |              ), 0.01,  0.01,  0.01,  0.01,  0.01
+   2 , k_3_0.25_5_derby_kd_recall_times_transfer ,       4  ,     5 (--  *-         |              ), 0.01,  0.02,  0.04,  0.06,  0.07
+   3 , k_3_0.25_5_felix_kd_recall_times_transfer ,       5  ,     3 ( --- *         |              ), 0.02,  0.04,  0.05,  0.07,  0.07
+   3 , k_3_0.25_5_hive_kd_recall_times_transfer ,       6  ,     4 ( --- *-        |              ), 0.01,  0.04,  0.06,  0.07,  0.08
+   3 , k_3_0.25_5_cxf_kd_recall_times_transfer ,       6  ,     2 (  ---*         |              ), 0.03,  0.06,  0.06,  0.07,  0.07
+   3 , k_3_0.25_5_camel_kd_recall_times_transfer ,       6  ,     1 (  ---*-        |              ), 0.03,  0.06,  0.06,  0.07,  0.08
+   3 , k_3_0.25_5_openjpa_kd_recall_times_transfer ,       6  ,     4 ( --- *-        |              ), 0.02,  0.05,  0.06,  0.07,  0.08
+   3 , k_3_0.25_5_cassandra_kd_recall_times_transfer ,       6  ,     2 ( --- *-        |              ), 0.02,  0.05,  0.06,  0.07,  0.08
+   3 , k_3_0.25_5_wicket_kd_recall_times_transfer ,       6  ,     2 (  ---*--       |              ), 0.03,  0.06,  0.06,  0.07,  0.09
+   3 , k_3_0.25_5_accumulo_kd_recall_times_transfer ,       6  ,     2 ( ----*--       |              ), 0.02,  0.06,  0.06,  0.07,  0.09
+   3 , k_3_0.25_5_pig_kd_recall_times_transfer ,       6  ,     3 ( --- *--       |              ), 0.02,  0.05,  0.06,  0.07,  0.09
+   3 , k_3_0.25_5_bookkeeper_kd_recall_times_transfer ,       6  ,     3 ( ----*-        |              ), 0.02,  0.06,  0.06,  0.07,  0.08
+   4 , k_3_0.25_5_felix_kd_recall_times_global_transfer ,       9  ,     0 (        *-     |              ), 0.09,  0.09,  0.09,  0.09,  0.11
+   4 , k_3_0.25_5_derby_kd_recall_times_global_transfer ,       9  ,     0 (        *      |              ), 0.09,  0.09,  0.09,  0.09,  0.11
+   4 , k_3_0.25_5_cxf_kd_recall_times_global_transfer ,       9  ,     0 (        *-     |              ), 0.09,  0.09,  0.09,  0.09,  0.11
+   4 , k_3_0.25_5_hive_kd_recall_times_global_transfer ,       9  ,     1 (        *---   |              ), 0.09,  0.09,  0.09,  0.10,  0.13
+   4 , k_3_0.25_5_camel_kd_recall_times_global_transfer ,       9  ,     1 (        *---   |              ), 0.09,  0.09,  0.09,  0.10,  0.13
+   4 , k_3_0.25_5_openjpa_kd_recall_times_global_transfer ,      10  ,     1 (        *--    |              ), 0.09,  0.09,  0.10,  0.10,  0.12
+   4 , k_3_0.25_5_wicket_kd_recall_times_global_transfer ,      10  ,     2 (        *---   |              ), 0.09,  0.09,  0.10,  0.10,  0.13
+   4 , k_3_0.25_5_cassandra_kd_recall_times_global_transfer ,      10  ,     0 (         *-    |              ), 0.09,  0.10,  0.10,  0.10,  0.12
+   4 , k_3_0.25_5_accumulo_kd_recall_times_global_transfer ,      10  ,     1 (        -*--   |              ), 0.09,  0.10,  0.10,  0.10,  0.13
+   4 , k_3_0.25_5_pig_kd_recall_times_global_transfer ,      10  ,     1 (        -*--   |              ), 0.10,  0.10,  0.10,  0.11,  0.14
+   4 , k_3_0.25_5_bookkeeper_kd_recall_times_global_transfer ,      10  ,     1 (         *--   |              ), 0.10,  0.10,  0.10,  0.11,  0.13
