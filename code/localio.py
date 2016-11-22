@@ -94,12 +94,17 @@ def datafile_stats(basepath, filenames):
 
 def csv_reader2(filename, mini=False):
     first = True
+    data = []
     with open(filename) as temp_file:
         if first:
             temp_file.readline()
             first = False
-        data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
-
+        for line in temp_file:
+            tmp = [float(r) for r in line.rstrip("\n").split(',')]
+            if tmp not in data:
+                data.append(tmp)
+        #data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
+    return data
     meds = numpy.median(data, axis=0)
     mins = numpy.amin(data, axis=0)
     maxs = numpy.amax(data, axis=0)
@@ -164,7 +169,7 @@ def csv_reader_remove_duplicates(filename, mini=False):
     ev = numpy.unique(evects)
     data2 = numpy.dot(data, evects)
     corr = numpy.corrcoef(data2, rowvar=0)
-
+    data2 = data2.tolist()
     useless = set()
     # useless2 = [ind for ind, mn, md, mx, sd in enumerate(zip(mins,meds, maxs, stds)) if (md-md < sd) if (mx-md < sd)]
     # print(useless2)
@@ -173,6 +178,7 @@ def csv_reader_remove_duplicates(filename, mini=False):
     limit = .999
     for j, row in enumerate(corr):
         useless.update([(i, j) for i, val in enumerate(row) if (val > limit and val != 1.0)])
+
 
     # print(useless)
 
@@ -509,12 +515,14 @@ def prep_stats(path='.'):
         # Call Menzies' magic stats maker
 
 
-def strip_csv(file, col):
-    cout = open('tmp.csv', 'w')
-    with open(file, 'r') as f:
+def strip_csv(file, col, inpath, outpath, times):
+    f2 = file.split('.')[0]
+    cout = open(outpath + f2 + '2.csv', 'w')
+    with open(inpath + file, 'r') as f:
         for line in f:
             results = line.strip("\n").split(',')
-            del results[col]
+            for t in range(times):
+                del results[col]
             cout.write(','.join([r for r in results]) + "\n")
     cout.close()
 
@@ -823,7 +831,8 @@ def menzies_stats(path):
                 results = results[1:]
                 d[label] = [eval(x) for x in results]
         #make stats
-        del d['']
+        if '' in d:
+            del d['']
 
         data = []
         for k in d.keys():
@@ -854,7 +863,7 @@ def menzies_time_stats(path, infiles):
             inp = [str(k)]
             inp.extend(list(d[k]))
             data.append(inp)
-        with open(path + zz[0].split('_')[4] + "\\time_stats.txt", 'w') as out:
+        with open(path + "time_stats.txt", 'w') as out:
             rdivDemo(data, out)
     print("done")
 
@@ -910,11 +919,10 @@ def directory_master(path, func, want=None, dontwant=None, **kwargs):
 
 def directory_master2(path, func, want=None, dontwant=None, **kwargs):
     # make a directory tree to traverse
-
     for dirName, subdirList, fileList in os.walk(path):
-        infiles = [x for x in fileList if '.txt' in x if 'idea' not in x if 'error' not in x if (want == None or want in x) if dontwant not in x]
+        infiles = [x for x in fileList if '.txt' in x if 'idea' not in x if 'error' not in x if (want == None or want in x) if 'cart' in x if dontwant not in x]
         print(dirName)
-        func(path, infiles, **kwargs)
+        func(path+"\\", infiles, **kwargs)
 
 def summarizeData(dir, *args):
     print("Under Construction")
@@ -947,6 +955,8 @@ def abcd_master(dir, wanted):
     errorout = open(path + "abcdErrors.txt", 'w')
 
     directory_master(dir, abcd_caller, want = wanted, dontwant="times", acc=acc, pd=pd, pf=pf, prec=prec, f=f, g=g, errorout=errorout)
+    #directory_master(dir, abcd_cart, want=wanted, dontwant="times", acc=acc, pd=pd, pf=pf, prec=prec, f=f, g=g,
+                     #errorout=errorout)
 
 
     #with filemanager(dir, "times"):
@@ -966,11 +976,14 @@ def abcd_caller(dir, files, **kwargs):
     log = None
     oldlabel = None
     files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1])
+    #files.sort(key=lambda x: x.replace(".txt", "").strip())
+
     i = 0
 
     for f in files:
         #read in file
         label = f.replace(".txt", "").split('-')[1]
+        #label = f.replace(".txt","")
         log = None
         if os.stat(dir + f).st_size != 0:
             with open(dir + f, 'r') as cin:
@@ -1051,6 +1064,56 @@ def combine_summary_files_and_stats(path, out):
                     out.write("," + data)
 	out.close()
 """
+
+
+def abcd_cart(dir, files, **kwargs):
+    log = None
+    oldlabel = None
+    #files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1])
+    files.sort(key=lambda x: x.replace(".txt", "").strip())
+
+    i = 0
+
+    for f in files:
+        #read in file
+        #label = f.replace(".txt", "").split('-')[1]
+        label = f.replace(".txt","")
+        log = None
+        if os.stat(dir + f).st_size != 0:
+            with open(dir + f, 'r') as cin:
+                print(f)
+                for line in cin:
+                    words = re.sub(r"[\n\r]", "", line).split(",")
+                    one, two = words[0], words[1]
+                    if log:
+                        log(one, two)
+                    else:
+                        log = Abcd(one, two)
+
+                    # put the pieces in each file
+                if label != oldlabel:
+                    try:
+                        kwargs['acc'].write("\n" + label + "," + str(numpy.dot(numpy.array([s.acc for x, s in sorted(log.scores().items())]), [log.yes, log.no]) / (log.yes + log.no)))
+                        kwargs['pd'].write("\n" + label + "," +  str(numpy.dot(numpy.array([s.pd for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['pf'].write("\n" + label + "," +  str(numpy.dot(numpy.array([s.pf for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['prec'].write("\n" + label + "," +  str(numpy.dot(numpy.array([s.prec for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['f'].write("\n" + label + "," +  str(numpy.dot(numpy.array([s.f for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['g'].write("\n" + label + "," +  str(numpy.dot(numpy.array([s.g for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        oldlabel = deepcopy(label)
+                    except ValueError:
+                        kwargs['errorout'].write("ERROR WITH " + f + "\n")
+                        pass
+                else:
+                    try:
+                        kwargs['acc'].write("," + str(numpy.dot(numpy.array([s.acc for x, s in sorted(log.scores().items())]),[log.yes, log.no]) / (log.yes + log.no)))
+                        kwargs['pd'].write("," +  str(numpy.dot(numpy.array([s.pd for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['pf'].write("," +  str(numpy.dot(numpy.array([s.pf for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['prec'].write("," +  str(numpy.dot(numpy.array([s.prec for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['f'].write("," +  str(numpy.dot(numpy.array([s.f for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                        kwargs['g'].write("," +  str(numpy.dot(numpy.array([s.g for x,s in sorted(log.scores().items())]),[log.yes, log.no])/(log.yes + log.no)))
+                    except ValueError:
+                        kwargs['errorout'].write("ERROR WITH " + f + "\n")
+                        pass
 
 def collator(dir, wanted, name):
     # INPUT:    dir, "wanted" files, name for summary file
@@ -1541,20 +1604,27 @@ def times_stats(fileroot, datafiles):
 
 """
 print("x")
-datafiles = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
-#firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\10 Datasets k3 Weighted\\'
-firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\10 datasets duplicates removed\\'
-files = times_stats(firstpart, datafiles)
-menzies_time_stats(firstpart, files)
-"""
-"""
 #files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
-files = ['accumulo', 'cxf']
-firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\10 dups removed weighted normalized\\'
+#files = ['jm1', 'kc2']
+files = ['ant2', 'arc2', 'berek2', 'camel2', 'elearning2', 'ivy2','jedit2', 'log4j2', 'lucene2', 'poi2', 'synapse2', 'xerces2']
+#firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\10 Datasets k3 Weighted\\'
+firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\Second Dataset\\Make Times\\'
+dats = times_stats(firstpart, files)
+menzies_time_stats(firstpart, dats)
+"""
+"""
+firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\Third Dataset - Mini\\'
+abcd_master(firstpart, 'cart')
+menzies_stats(firstpart+"cart\\")
+"""
+
+#files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
+#files = ['jm1', 'kc2']
+files = ['ant2', 'arc2', 'berek2', 'camel2', 'elearning2', 'ivy2','jedit2', 'log4j2', 'lucene2', 'poi2', 'synapse2', 'xerces2']
+firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\1st Run\\'
 # only accumulo and cxf for duplicates removed
 for m in files:
     abcd_master(firstpart, m)
-
 
 for f in files:
     path = firstpart + f + "\\"
@@ -1562,9 +1632,10 @@ for f in files:
 
 #files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
 
-tree_depths = [5, 7, 9, 11, 13]
-trees = ['kd', 'pca', '2-means', 'rp', 'where', 'random', 'spectral', 'entropic']
-spill_rates = [0, 0.01, 0.05, 0.10, 0.15, 0.2, 0.25]
+"""
+tree_depths = [5]
+trees = ['kd']
+spill_rates = [0.25]
 nearneighbors = [3]
 stats_on_stats(firstpart, files, nearneighbors, spill_rates, tree_depths, trees)
 """
@@ -1579,4 +1650,12 @@ stats_on_stats(firstpart, files, nearneighbors, spill_rates, tree_depths, trees)
 # del_txt()
 # graph_data()
 # need to cut the first element off of mccabes_mc12 before using
+"""
+"""
+outpath = "C:\\Users\\Andrew\\PycharmProjects\\spatialtree\\Mining Datasets\\Bellweather\\Promise Datasets\\CK2\\"
+inpath = "C:\\Users\\Andrew\\PycharmProjects\\spatialtree\\Mining Datasets\\Bellweather\\Promise Datasets\\CK\\"
+files = ['ant.csv', 'arc.csv', 'berek.csv', 'camel.csv', 'elearning.csv', 'ivy.csv', 'jedit.csv', 'log4j.csv', 'lucene.csv', 'poi.csv', 'prop6.csv', 'synapse.csv', 'tomcat.csv', 'xalan.csv', 'xerces.csv']
+for f in files:
+    for i in range(3):
+        strip_csv(f, 0, inpath, outpath, 3)
 """
