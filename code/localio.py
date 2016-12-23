@@ -207,23 +207,34 @@ def csv_reader_remove_duplicates(filename, mini=False):
 
 def csv_reader_remove_duplicates_and_normalize(filename, mini=False):
     first = True
+    data = []
     with open(filename) as temp_file:
         if first:
             temp_file.readline()
             first = False
-        data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
-        data.sort()
-        data = list(d for d, _ in itertools.groupby(data))
+        for line in temp_file:
+            tmp = [float(r) for r in line.rstrip("\n").split(',')]
+            if tmp not in data:
+                data.append(tmp)
+        #data = [[float(r) for r in line.rstrip('\n').split(',')] for line in temp_file]
+        #data.sort()
+        #data = list(d for d, _ in itertools.groupby(data))
         shuffle(data)
 
     meds = numpy.median(data, axis=0)
     mins = numpy.amin(data, axis=0)
     maxs = numpy.amax(data, axis=0)
     stds = numpy.std(data, axis=0)
+    tmp = []
+    for row in data:
+        tmp.append(row[-1])
 
     data = numpy.array(data)
     x_normed = data / data.max(axis=0)
     data = x_normed.tolist()
+
+    for i in range(len(data)):
+        data[i][-1] = tmp[i]
 
     cov = numpy.corrcoef(data, rowvar=0)
     evals, evects = numpy.linalg.eig(cov)
@@ -261,9 +272,11 @@ def csv_reader_remove_duplicates_and_normalize(filename, mini=False):
         data2, sampledata2 = "error", "error"
 
     if mini:
-        return sampledata, sampledata2, reduced
+        #return sampledata, sampledata2, reduced
+        return sampledata
     else:
-        return data, data2, reduced
+        #return data, data2, reduced
+        return data
 
 def pretty_print(f, d):
     for k in sorted(d.keys()):
@@ -920,7 +933,8 @@ def directory_master(path, func, want=None, dontwant=None, **kwargs):
 def directory_master2(path, func, want=None, dontwant=None, **kwargs):
     # make a directory tree to traverse
     for dirName, subdirList, fileList in os.walk(path):
-        infiles = [x for x in fileList if '.txt' in x if 'idea' not in x if 'error' not in x if (want == None or want in x) if 'cart' in x if dontwant not in x]
+        infiles = [x for x in fileList if '.txt' in x if 'idea' not in x if 'rror' not in x if
+                   (want == None or want in x) if 'transfer' not in x if dontwant not in x if 'stats' not in x if 'cart' not in x]
         print(dirName)
         func(path+"\\", infiles, **kwargs)
 
@@ -939,11 +953,12 @@ def filemanager(dir, fname):
 
 def abcd_master(dir, wanted):
     #path = os.path.dirname(dir)
-    path = dir + "\\" + wanted
+    #path = dir + "\\" + wanted
+    path = dir
 
     if not os.path.exists(path):
         os.makedirs(path)
-    path += "\\"
+    #path += "\\"
 
     # open files for all stats
     acc = open(path + "acc.csv", 'w')
@@ -954,7 +969,7 @@ def abcd_master(dir, wanted):
     g = open(path + "g.csv", 'w')
     errorout = open(path + "abcdErrors.txt", 'w')
 
-    directory_master(dir, abcd_caller, want = wanted, dontwant="times", acc=acc, pd=pd, pf=pf, prec=prec, f=f, g=g, errorout=errorout)
+    directory_master2(dir, abcd_caller, want = wanted, dontwant="times", acc=acc, pd=pd, pf=pf, prec=prec, f=f, g=g, errorout=errorout)
     #directory_master(dir, abcd_cart, want=wanted, dontwant="times", acc=acc, pd=pd, pf=pf, prec=prec, f=f, g=g,
                      #errorout=errorout)
 
@@ -975,15 +990,23 @@ def abcd_master(dir, wanted):
 def abcd_caller(dir, files, **kwargs):
     log = None
     oldlabel = None
-    files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1])
+    print(files)
+    files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1:])
+    #files.sort(key=lambda x: '_'.join(x.replace(".txt", "").strip().split('_')[1:]))
     #files.sort(key=lambda x: x.replace(".txt", "").strip())
 
     i = 0
 
     for f in files:
         #read in file
-        label = f.replace(".txt", "").split('-')[1]
+        try:
+            label = f.replace(".txt", "").split('-')[1]
+        except IndexError:
+            label = f.replace(".txt","")
+        #label = '_'.join(f.replace(".txt", "").strip().split('_')[1:])
         #label = f.replace(".txt","")
+        #label = 'Gauss' if 'Gauss' in f else ('Multinom' if 'Multinom' in f else 'Logistic')
+        #label = 'Cart Global' if ('cart' in f and 'global' in f) else 'Cart' if 'cart' in f else 'global' if 'global' in f else 'kd'
         log = None
         if os.stat(dir + f).st_size != 0:
             with open(dir + f, 'r') as cin:
@@ -1069,15 +1092,15 @@ def combine_summary_files_and_stats(path, out):
 def abcd_cart(dir, files, **kwargs):
     log = None
     oldlabel = None
-    #files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1])
-    files.sort(key=lambda x: x.replace(".txt", "").strip())
+    files.sort(key=lambda x: x.replace(".txt", "").strip().split('-')[1])
+    #files.sort(key=lambda x: x.replace(".txt", "").strip())
 
     i = 0
 
     for f in files:
         #read in file
-        #label = f.replace(".txt", "").split('-')[1]
-        label = f.replace(".txt","")
+        label = f.replace(".txt", "").split('-')[1]
+        #label = f.replace(".txt","")
         log = None
         if os.stat(dir + f).st_size != 0:
             with open(dir + f, 'r') as cin:
@@ -1591,6 +1614,96 @@ def stats_on_stats2(fileroot, datasets, knns, spills, depths, methods):
     with open(fileroot + "Summaries\\otherSummary2.txt", 'w') as outfile:
         pprint.pprint(compilation2, outfile)
 
+def writeThis(outfile, *args):
+    for x in args:
+        pprint.pprint(x, outfile)
+    outfile.write("\n")
+
+def newStatsOnStats(inpath, outpath, keywords, files, readFiles, antiKeys=None, topN = 1):
+    abcd_master(inpath, None)
+    print("finished abcd")
+    menzies_stats(inpath)
+    print("finished stats")
+
+    data = []
+    for metric in readFiles:
+        data.append([f for f in open(inpath+metric+"_stats.txt", 'r')])
+
+    stuff = []
+    for metric in readFiles:
+        stuff.append(open(outpath + metric + "Summary.txt", 'w'))
+
+
+    print("Collating Data...")
+    for i in range(len(data)):
+        big = {m: 0 for m in keywords}
+        dat = data[i]
+        for f in files:
+            tmp = [g for g in dat if f in g if not any([m in g for m in antiKeys]) if any([m in g for m in keywords])]
+            options = {m: 0 for m in keywords}
+
+            # 1, berek_Gauss, 8800, 1300 ( --- | ---* ), 2.00, 2.00, 51.00, 65.00, 100.00
+            tmpBest = [[],[]]
+            tmpWorst = [[],[]]
+            total = 0
+            ranks = []
+
+            for line in tmp:
+                useable = line.strip("\n").split(",")
+                rnk = float(useable[0])
+                if rnk not in ranks:
+                    ranks.append(rnk)
+            print(f, ranks)
+            sorted(ranks, reverse=True if i == 1 else False)
+            tmprank = ranks[-1]
+            ranks = [ranks[0]]
+            if i == 1:
+                for k in range(topN):
+                    ranks.append(ranks[0] + 1 + k)
+                else:
+                    ranks.append(ranks[0] - (1 + k))
+            ranks.append(tmprank)
+
+            for line in tmp:
+                useable = line.strip("\n").split(",")
+                total += 1
+                rank = float(useable[0])
+                name = useable[1].strip()
+                med = int(float(useable[2])/100.0)
+                iqr = int(float(useable[3].split('(')[0].strip())/100)
+                if rank == ranks[0]:
+                #if rank == maxx and wantBig or rank == minn and not wantBig:
+                    tmpBest[0].append(med)
+                    tmpBest[1].append(iqr)
+                #elif rank in ranks[:topN]:
+                #elif rank < maxx and wantBig or rank > minn and not wantBig:
+                    for k in options.keys():
+                        if k in name:
+                            options[k] += 1
+                            big[k] += 1
+                if rank == ranks[-1]:
+                #if rank == maxx and not wantBig or rank == minn and wantBig:
+                    tmpWorst[0].append(med)
+                    tmpWorst[1].append(iqr)
+            spreads = {'med': min(tmpBest[0]) - max(tmpWorst[0]), 'iqr': max(tmpBest[1]) - min(tmpWorst[1]), 'rankSplit': ranks[0] - ranks[-1], 'bestRank': ranks[0]}#calc med, iqr spread and rank difference, put in TMPSPREADS
+            writeThis(stuff[i], f, options, spreads)
+
+        writeThis(stuff[i], big)
+    for k in range(len(stuff)):
+        stuff[k].close()
+
+
+# write total down somewhere
+
+#otuput all this stuff you stored
+
+
+
+
+
+
+
+
 def times_stats(fileroot, datafiles):
     print("here")
     infiles = []
@@ -1612,50 +1725,14 @@ firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci
 dats = times_stats(firstpart, files)
 menzies_time_stats(firstpart, dats)
 """
-"""
-firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\Third Dataset - Mini\\'
-abcd_master(firstpart, 'cart')
-menzies_stats(firstpart+"cart\\")
-"""
 
-#files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
-#files = ['jm1', 'kc2']
-files = ['ant2', 'arc2', 'berek2', 'camel2', 'elearning2', 'ivy2','jedit2', 'log4j2', 'lucene2', 'poi2', 'synapse2', 'xerces2']
-firstpart = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\1st Run\\'
-# only accumulo and cxf for duplicates removed
-for m in files:
-    abcd_master(firstpart, m)
-
-for f in files:
-    path = firstpart + f + "\\"
-    menzies_stats(path)
-
-#files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket']
-
-"""
-tree_depths = [5]
-trees = ['kd']
-spill_rates = [0.25]
-nearneighbors = [3]
-stats_on_stats(firstpart, files, nearneighbors, spill_rates, tree_depths, trees)
-"""
-"""
-#path = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\Data\\10 Datasets Classifier Run 1\\Summaries\\'
-#menzies_stats_mod(path)
-#summary_master(write_all)
-#statstree_master(menzies_statsmod)
-#statstree_master(prep_stats)
-#menzies_stats("C:\\Users\\Andrew\\PycharmProjects\\spatialtree\\1000samples\\unconstrained\\")
-#sort_files()
-# del_txt()
-# graph_data()
-# need to cut the first element off of mccabes_mc12 before using
-"""
-"""
-outpath = "C:\\Users\\Andrew\\PycharmProjects\\spatialtree\\Mining Datasets\\Bellweather\\Promise Datasets\\CK2\\"
-inpath = "C:\\Users\\Andrew\\PycharmProjects\\spatialtree\\Mining Datasets\\Bellweather\\Promise Datasets\\CK\\"
-files = ['ant.csv', 'arc.csv', 'berek.csv', 'camel.csv', 'elearning.csv', 'ivy.csv', 'jedit.csv', 'log4j.csv', 'lucene.csv', 'poi.csv', 'prop6.csv', 'synapse.csv', 'tomcat.csv', 'xalan.csv', 'xerces.csv']
-for f in files:
-    for i in range(3):
-        strip_csv(f, 0, inpath, outpath, 3)
-"""
+inpth = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\Major Comparison\\'
+outp = 'C:\\Users\\Andrew\\Documents\\Schools\\Grad School\\NCSU - Comp Sci\\Research\\Overlaping Trees\\Data\\Major Comparison\\'
+#keywords =  ['Gauss', 'Tran', 'GL', 'KNN1', 'KNN3', 'KNN5', 'KNN10']
+keywords = ['Gauss', 'Tran', 'GL']
+antiKeywords = ['KNN']
+files = ['accumulo', 'bookkeeper', 'camel', 'cassandra', 'cxf', 'derby', 'felix', 'hive', 'openjpa', 'pig', 'wicket','ant2',
+         'arc2', 'berek2', 'camel2', 'elearning2', 'ivy2', 'jedit2', 'log4j2', 'lucene2', 'poi2', 'synapse2', 'xerces2','cm1',
+         'pc1', 'pc3', 'pc4']
+readThese = ['pd', 'pf', 'f']
+newStatsOnStats(inpth, outp, keywords, files, readThese, antiKeywords)
