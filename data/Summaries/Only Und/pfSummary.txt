@@ -1,0 +1,110 @@
+'accumulo'
+{'Gauss': 6, 'Tran': 7, 'Und': 5}
+{'bestRank': 1.0, 'iqr': -7, 'med': -90, 'rankSplit': -27.0}
+
+'bookkeeper'
+{'Gauss': 7, 'Tran': 6, 'Und': 5}
+{'bestRank': 1.0, 'iqr': 44, 'med': -91, 'rankSplit': -28.0}
+
+'camel'
+{'Gauss': 6, 'Tran': 8, 'Und': 5}
+{'bestRank': 1.0, 'iqr': 0, 'med': -76, 'rankSplit': -24.0}
+
+'cassandra'
+{'Gauss': 7, 'Tran': 8, 'Und': 6}
+{'bestRank': 1.0, 'iqr': -13, 'med': -31, 'rankSplit': -11.0}
+
+'cxf'
+{'Gauss': 6, 'Tran': 8, 'Und': 5}
+{'bestRank': 1.0, 'iqr': -8, 'med': -54, 'rankSplit': -17.0}
+
+'derby'
+{'Gauss': 6, 'Tran': 6, 'Und': 4}
+{'bestRank': 1.0, 'iqr': -10, 'med': -84, 'rankSplit': -25.0}
+
+'felix'
+{'Gauss': 6, 'Tran': 8, 'Und': 5}
+{'bestRank': 1.0, 'iqr': -11, 'med': -84, 'rankSplit': -25.0}
+
+'hive'
+{'Gauss': 6, 'Tran': 8, 'Und': 6}
+{'bestRank': 1.0, 'iqr': -9, 'med': -44, 'rankSplit': -15.0}
+
+'openjpa'
+{'Gauss': 6, 'Tran': 8, 'Und': 4}
+{'bestRank': 1.0, 'iqr': 8, 'med': -96, 'rankSplit': -28.0}
+
+'pig'
+{'Gauss': 6, 'Tran': 8, 'Und': 5}
+{'bestRank': 1.0, 'iqr': -2, 'med': -93, 'rankSplit': -28.0}
+
+'wicket'
+{'Gauss': 6, 'Tran': 8, 'Und': 5}
+{'bestRank': 1.0, 'iqr': -26, 'med': -50, 'rankSplit': -16.0}
+
+'ant2'
+{'Gauss': 0, 'Tran': 0, 'Und': 1}
+{'bestRank': 9.0, 'iqr': 10, 'med': -49, 'rankSplit': -15.0}
+
+'arc2'
+{'Gauss': 1, 'Tran': 1, 'Und': 1}
+{'bestRank': 12.0, 'iqr': 0, 'med': -55, 'rankSplit': -16.0}
+
+'berek2'
+{'Gauss': 2, 'Tran': 10, 'Und': 12}
+{'bestRank': 1.0, 'iqr': 42, 'med': -54, 'rankSplit': -17.0}
+
+'camel2'
+{'Gauss': 0, 'Tran': 1, 'Und': 2}
+{'bestRank': 13.0, 'iqr': 11, 'med': -41, 'rankSplit': -12.0}
+
+'elearning2'
+{'Gauss': 0, 'Tran': 0, 'Und': 2}
+{'bestRank': 4.0, 'iqr': 69, 'med': -82, 'rankSplit': -25.0}
+
+'ivy2'
+{'Gauss': 0, 'Tran': 1, 'Und': 1}
+{'bestRank': 13.0, 'iqr': -6, 'med': -52, 'rankSplit': -15.0}
+
+'jedit2'
+{'Gauss': 0, 'Tran': 0, 'Und': 1}
+{'bestRank': 4.0, 'iqr': 45, 'med': -92, 'rankSplit': -26.0}
+
+'log4j2'
+{'Gauss': 1, 'Tran': 2, 'Und': 4}
+{'bestRank': 1.0, 'iqr': 2, 'med': -44, 'rankSplit': -15.0}
+
+'lucene2'
+{'Gauss': 0, 'Tran': 2, 'Und': 3}
+{'bestRank': 1.0, 'iqr': 0, 'med': -52, 'rankSplit': -17.0}
+
+'poi2'
+{'Gauss': 0, 'Tran': 2, 'Und': 3}
+{'bestRank': 1.0, 'iqr': 0, 'med': -51, 'rankSplit': -17.0}
+
+'synapse2'
+{'Gauss': 0, 'Tran': 1, 'Und': 1}
+{'bestRank': 4.0, 'iqr': 15, 'med': -52, 'rankSplit': -16.0}
+
+'xerces2'
+{'Gauss': 0, 'Tran': 2, 'Und': 2}
+{'bestRank': 1.0, 'iqr': 0, 'med': -50, 'rankSplit': -16.0}
+
+'cm1'
+{'Gauss': 1, 'Tran': 1, 'Und': 1}
+{'bestRank': 13.0, 'iqr': -5, 'med': -54, 'rankSplit': -15.0}
+
+'pc1'
+{'Gauss': 0, 'Tran': 1, 'Und': 1}
+{'bestRank': 11.0, 'iqr': -2, 'med': -62, 'rankSplit': -18.0}
+
+'pc3'
+{'Gauss': 1, 'Tran': 2, 'Und': 2}
+{'bestRank': 12.0, 'iqr': -3, 'med': -56, 'rankSplit': -16.0}
+
+'pc4'
+{'Gauss': 1, 'Tran': 0, 'Und': 0}
+{'bestRank': 8.0, 'iqr': 0, 'med': -62, 'rankSplit': -19.0}
+
+{'Gauss': 75, 'Tran': 109, 'Und': 92}
+
